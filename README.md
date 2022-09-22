@@ -1,5 +1,5 @@
 
-# Language and vision in conceptual processing: Multilevel analysis and statistical power
+# Language and sensorimotor simulation in conceptual processing: Multilevel analysis and statistical power
 
 ### Incomplete repository
 
