@@ -1,0 +1,355 @@
+---
+title: 'This page and the next page should be manually removed. Template used: https://osf.io/g7dbt.'
+shorttitle:  'Subliminal Header'
+
+csl:                "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
+documentclass:      apa7
+classoption:        man
+fontsize:           12pt
+linestretch:        1.5
+floatsintext:       yes
+figurelist:         no
+tablelist:          no
+footnotelist:       no
+linenumbers:        no
+mask:               no
+
+bibliography: ['references.bib', 'package-references.bib']
+
+output:
+  papaja::apa6_pdf:
+    extra_dependencies: ['flafter']   # Place tables and figures below where they are first mentioned in the text.
+      
+# Latex preamble specifying layout
+header-includes:
+  - \setcounter{tocdepth}{3}
+  - \addtolength\oddsidemargin {0.5cm}
+  - \addtolength\evensidemargin {-0.5cm}
+  - \linespread{1.2} 
+  - \usepackage{changepage} 
+  - \usepackage{setspace} 
+  - \shorttitle{}
+  - \usepackage{fancyhdr} 
+  - \fancyhf{}
+  - \cfoot{\thepage}
+  - \pagestyle{fancy}
+  - \renewcommand{\headrulewidth}{0pt}
+  - \pagestyle{plain}
+  - \interfootnotelinepenalty=10000
+  - \renewcommand{\topfraction}{.75}        # Reduce page margins
+  - \renewcommand{\bottomfraction}{.4}      # Reduce page margins
+  - \renewcommand{\textfraction}{.15}       # Reduce page margins
+  - \renewcommand{\floatpagefraction}{.6}   # Reduce page margins
+  - \setlength{\@fptop}{0pt}                # Vertically-align tables and figures to the top
+  - \setcounter{topnumber}{3}               # Reduce page margins
+  - \setcounter{bottomnumber}{2}            # Reduce page margins
+  - \setcounter{totalnumber}{4}             # Reduce page margins
+  - \usepackage{placeins}                   # Allow use of `\FloatBarrier` to position tables and figures
+  - \usepackage{amsmath}                    # Maths formatting
+  - \usepackage{upgreek}                    # Disable the italicisation of Greek letters
+  - \usepackage{booktabs}                   # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{longtable}                  # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{array}                      # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{multirow}                   # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{wrapfig}                    # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{float}                      # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{colortbl}                   # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{pdflscape}                  # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{tabu}                       # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{threeparttable}             # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{threeparttablex}            # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage[normalem]{ulem}             # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{makecell}                   # Dependency for R package 'kableExtra' (table formatting)
+  - \usepackage{xcolor}                     # Dependency for R package 'kableExtra' (table formatting)
+  - \renewcommand\appendix{}                # Remove redundant 'Appendix' label
+---
+
+
+\clearpage\mbox{}\thispagestyle{empty}\clearpage
+
+\setcounter{page}{1}
+
+\thispagestyle{empty}
+\begin{center}
+\vspace*{10mm}
+\textbf{\Large Language and sensorimotor simulation in conceptual processing: Multilevel analysis and statistical power }\\
+
+\bigskip
+\bigskip
+\bigskip
+
+\textbf{\large Pablo César de Juan Bernabéu }\\
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+{\setstretch{1.7} 
+This thesis is submitted for the degree of  \\
+Doctor of Philosophy in Psychology  \\
+\bigskip
+Lancaster University  \\
+Department of Psychology  \\
+\bigskip
+September 2022  \\
+}
+\end{center}
+
+\newpage
+
+
+# Abstract
+
+Research has suggested that conceptual processing depends on both language-based and sensorimotor information. In this thesis, I investigate the nature of these systems and their interplay at three levels of the experimental structure---namely, individuals, words and tasks. In Chapter 1, I describe a multi-lab study to which I contributed. We could not replicate the object orientation effect, which has been used to test sensorimotor simulation. The effect did not appear across 18 languages and was not influenced by individual differences in mental rotation. Next, in Study 2, we drew on three existing data sets that implemented semantic priming, semantic decision and lexical decision. We extended these data sets with language-based and vision-based measures, and analysed their interactions with participants' vocabulary size, gender and presentation speed. The analysis had a conservative structure of fixed and random effects. First, language-based information was found to be more important than vision-based information. Second, in the semantic priming study---whose task required distinguishing between words and nonwords---, both language-based and vision-based information were more influential when words were presented faster. Third, a 'task-relevance advantage' was identified in higher-vocabulary participants. Specifically, in lexical decision, higher-vocabulary participants were more sensitive than lower-vocabulary participants to language-based information. In contrast, in semantic decision, higher-vocabulary participants were more sensitive to word concreteness. Fourth, a human-based measure of visual information was found to be superior to a computational measure. Last, we estimated the sample size required to investigate various effects. We found that 300 participants were sufficient to examine the effect of language-based information in words, whereas more than 1,000 participants were necessary for the effect of vision-based information and for the interactions of both former variables with vocabulary size, gender and presentation speed. This power analysis reveals the need to increase sample sizes for research on perceptual simulation and individual differences. 
+
+\newpage
+
+
+\begin{flushleft}
+{\setstretch{1.0}
+\tableofcontents
+}
+\end{flushleft}
+
+\newpage 
+
+
+
+# Acknowledgements
+
+Thank you to my supervisors, Dr. Dermot Lynott and Prof. Louise Connell, for your invaluable advice and encouragement. This journey has been as interesting and academically enriching for me as I had hoped. I equally value the personal support from Dermot when it was needed. Thank you also to all my colleagues, including the members of the Embodied Cognition Lab, as well as all the faculty and the students I worked with as a graduate teaching assistant. I very much enjoyed working with you, and learned a lot in the process. Thank you very much to the Department of Psychology at Lancaster University for their fundamental support throughout my PhD. Thank you to all the staff who have guided and helped me along the way, at my department, at the Information Systems Services, and at the High-End Computing facility. Thank you to Gorilla Experiment Builder and to Prolific for a joint grant that will support my next study, and for their help with my questions. Thank you to the Software Sustainability Institute, the RepliCATS project and the Open Scholarship Community Galway for their indulgence and their awards, which helped support my PhD research, broadened my professional horizons, and allowed me to meet many great people. Thank you to Dr. Margriet Groen and Prof. Max Louwerse for their attention as the examiners of my PhD. Last but not least, thank you to my friends and family for all the talks talked and the walks walked.
+
+\newpage
+
+
+# Declaration
+
+The work submitted in this thesis is my own and has not been submitted in substantially the same form towards the award of another degree or other qualifying work by myself or by any other person. All sources have been referenced. 
+
+My role in Study 1 [@chenInvestigatingObjectOrientation2018a] has consisted of theoretical, methodological and stylistic suggestions in the design of the study, collection of data from 50 participants, and suggestions on the analysis of the data and the reporting of the results. My primary supervisor, Dr. Dermot Lynott, advised me throughout this project, and he contributed to the study himself. Next, I look forward to working on the last revisions of the manuscript.
+
+My role in Study 2 encompassed the entire study. Furthermore, my primary supervisor contributed to the design of the study and provided theoretical, methodological and stylistic advice throughout the project. My secondary supervisor, Prof. Louise Connell, contributed to the design of the study and provided occasional advice afterwards.
+
+The materials for Study 1 are available at https://osf.io/e428p, while the materials for Study 2 are at https://osf.io/ueryq.
+
+\newpage
+
+
+
+```{r setup, include = FALSE}
+
+# General knitr options
+knitr::opts_chunk$set(cache = FALSE, message = FALSE, warning = FALSE, 
+                      error = FALSE, echo = FALSE, 
+                      knitr.duplicate.label = 'allow', 
+                      fig.align = 'center', dev = 'CairoPDF', 
+                      knitr.graphics.auto_pdf = TRUE, dpi = 72, 
+                      out.width = '100%')
+
+library(papaja)       # APA-formatted manuscript
+library(knitr)        # Document rendering
+options(kableExtra.latex.load_packages = FALSE)  # instead, LaTeX packages loaded in header/preamble above
+library(kableExtra)   # Tables
+library(dplyr)        # Data wrangling
+library(formattable)  # Format numbers
+library(kableExtra)   # Table formatting (e.g., `pack_rows()`)
+library(stringr)      # Text processing
+library(ggplot2)      # Plots
+library(GGally)       # Correlation plots
+library(sjPlot)       # Model plots
+library(RColorBrewer) # Colours in plots
+library(patchwork)    # Combination of plots
+library(Cairo)        # Allows use of special characters such as dashes in plots
+library(magick)       # Image rendering
+library(tikzDevice)   # Image rendering
+
+# Move working directory to the project root
+knitr::opts_knit$set(root.dir = '../')
+
+```
+
+
+```{r load-functions-data-models, include = FALSE}
+
+# Read in all custom functions
+setwd('R_functions')
+sapply(list.files(), source, echo = FALSE)
+setwd('../')
+
+# Load main data sets and models. These objects are loaded directly, rather than 
+# being run on the go, to keep the knitting of the manuscript reasonably fast. 
+# Crucially, however, all the objects can be reproduced from the appropriate R 
+# scripts in the current project. For further details, see 'README.pdf' in 
+# 'manuscript' directory. 
+
+# Study 2.2.1: Semantic priming
+
+# Code for data set below in 'semanticpriming/data' folder
+semanticpriming = read.csv('semanticpriming/data/final_dataset/semanticpriming.csv')
+
+# Code for models below in 'semanticpriming/frequentist_analysis' folder
+semanticpriming_lmerTest =   # Primary model object
+  readRDS('semanticpriming/frequentist_analysis/results/semanticpriming_lmerTest.rds')
+KR_summary_semanticpriming_lmerTest =   # Model with Kenward-Roger p values
+  readRDS('semanticpriming/frequentist_analysis/results/KR_summary_semanticpriming_lmerTest.rds')
+confint_semanticpriming_lmerTest =   # Confidence intervals
+  readRDS('semanticpriming/frequentist_analysis/results/confint_semanticpriming_lmerTest.rds')
+
+
+# Subset of the semantic priming study that included vision-based similarity.
+# Code for data set below in 'semanticpriming/data' folder
+semanticpriming_with_visualsimilarity = 
+  read.csv('semanticpriming/data/subset_with_visualsimilarity/semanticpriming_with_visualsimilarity.csv')
+
+# Code for models below in 'semanticpriming/semanticpriming_with_visualsimilarity' folder
+semanticpriming_with_visualsimilarity_lmerTest =   # Primary model object
+  readRDS('semanticpriming/analysis_with_visualsimilarity/results/semanticpriming_with_visualsimilarity_lmerTest.rds')
+KR_summary_semanticpriming_with_visualsimilarity_lmerTest =   # Model with Kenward-Roger p values
+  readRDS('semanticpriming/analysis_with_visualsimilarity/results/KR_summary_semanticpriming_with_visualsimilarity_lmerTest.rds')
+confint_semanticpriming_with_visualsimilarity_lmerTest =   # Confidence intervals
+  readRDS('semanticpriming/analysis_with_visualsimilarity/results/confint_semanticpriming_with_visualsimilarity_lmerTest.rds')
+
+# Code for models below in 'semanticpriming/bayesian_analysis' folder
+semanticpriming_summary_informativepriors_exgaussian = 
+  readRDS('semanticpriming/bayesian_analysis/results/semanticpriming_summary_informativepriors_exgaussian.rds')
+semanticpriming_summary_weaklyinformativepriors_exgaussian = 
+  readRDS('semanticpriming/bayesian_analysis/results/semanticpriming_summary_weaklyinformativepriors_exgaussian.rds')
+semanticpriming_summary_diffusepriors_exgaussian = 
+  readRDS('semanticpriming/bayesian_analysis/results/semanticpriming_summary_diffusepriors_exgaussian.rds')
+
+
+# Study 2.2: Semantic decision
+# Code for data set below in 'semanticdecision/data' folder
+semanticdecision = read.csv('semanticdecision/data/final_dataset/semanticdecision.csv')
+
+# Code for models below in 'semanticdecision/frequentist_analysis' folder
+semanticdecision_lmerTest =   # Primary model object
+  readRDS('semanticdecision/frequentist_analysis/results/semanticdecision_lmerTest.rds')
+KR_summary_semanticdecision_lmerTest =   # Model with Kenward-Roger p values
+  readRDS('semanticdecision/frequentist_analysis/results/KR_summary_semanticdecision_lmerTest.rds')
+confint_semanticdecision_lmerTest =   # Confidence intervals
+  readRDS('semanticdecision/frequentist_analysis/results/confint_semanticdecision_lmerTest.rds')
+
+# Code for models below in 'semanticdecision/bayesian_analysis' folder
+semanticdecision_summary_informativepriors_exgaussian = 
+  readRDS('semanticdecision/bayesian_analysis/results/semanticdecision_summary_informativepriors_exgaussian.rds')
+semanticdecision_summary_weaklyinformativepriors_exgaussian = 
+  readRDS('semanticdecision/bayesian_analysis/results/semanticdecision_summary_weaklyinformativepriors_exgaussian.rds')
+semanticdecision_summary_diffusepriors_exgaussian = 
+  readRDS('semanticdecision/bayesian_analysis/results/semanticdecision_summary_diffusepriors_exgaussian.rds')
+
+
+# Study 2.3: Lexical decision
+# Code for data set below in 'lexicaldecision/data' folder
+lexicaldecision = read.csv('lexicaldecision/data/final_dataset/lexicaldecision.csv')
+
+# Code for models below in 'lexicaldecision/frequentist_analysis' folder
+lexicaldecision_lmerTest =   # Primary model object
+  readRDS('lexicaldecision/frequentist_analysis/results/lexicaldecision_lmerTest.rds')
+KR_summary_lexicaldecision_lmerTest =   # Model with Kenward-Roger p values
+  readRDS('lexicaldecision/frequentist_analysis/results/KR_summary_lexicaldecision_lmerTest.rds')
+confint_lexicaldecision_lmerTest =   # Confidence intervals
+  readRDS('lexicaldecision/frequentist_analysis/results/confint_lexicaldecision_lmerTest.rds')
+
+# Code for models below in 'lexicaldecision/bayesian_analysis' folder
+lexicaldecision_summary_informativepriors_exgaussian = 
+  readRDS('lexicaldecision/bayesian_analysis/results/lexicaldecision_summary_informativepriors_exgaussian.rds')
+lexicaldecision_summary_weaklyinformativepriors_exgaussian = 
+  readRDS('lexicaldecision/bayesian_analysis/results/lexicaldecision_summary_weaklyinformativepriors_exgaussian.rds')
+lexicaldecision_summary_diffusepriors_exgaussian = 
+  readRDS('lexicaldecision/bayesian_analysis/results/lexicaldecision_summary_diffusepriors_exgaussian.rds')
+
+```
+
+
+
+```{r, child = 'thesis/Introduction.Rmd'}
+```
+
+\clearpage
+
+```{r, child = 'thesis/Chapter-1.Rmd'}
+```
+
+\clearpage
+
+```{r, child = 'thesis/Chapter-2.Rmd'}
+```
+
+\clearpage
+
+```{r, child = 'thesis/General-discussion.Rmd'}
+```
+
+\clearpage
+
+
+
+# (APPENDIX) Appendix {-}
+
+<!-- Every appendix must be referenced below (see https://github.com/crsh/papaja/issues/496#issuecomment-996084228) -->
+
+<!-- Following APA format, precede figure and table numbers with the title letter of this appendix -->
+\renewcommand{\thefigure}{A\arabic{figure}} \setcounter{figure}{0}
+\renewcommand{\thetable}{A\arabic{table}} \setcounter{table}{0}
+
+```{r, child = 'thesis/appendix-A-lexical-covariates.Rmd'}
+```
+
+\clearpage
+
+
+<!-- Following APA format, precede figure and table numbers with the title letter of this appendix -->
+\renewcommand{\thefigure}{B\arabic{figure}} \setcounter{figure}{0}
+\renewcommand{\thetable}{B\arabic{table}} \setcounter{table}{0}
+
+```{r, child = 'thesis/appendix-B-frequentist-analysis-diagnostics.Rmd'}
+```
+
+\clearpage
+
+
+<!-- Following APA format, precede figure and table numbers with the title letter of this appendix -->
+\renewcommand{\thefigure}{C\arabic{figure}} \setcounter{figure}{0}
+\renewcommand{\thetable}{C\arabic{table}} \setcounter{table}{0}
+
+```{r, child = 'thesis/appendix-C-Bayesian-analysis-diagnostics.Rmd'}
+```
+
+\clearpage
+
+
+<!-- Following APA format, precede figure and table numbers with the title letter of this appendix -->
+\renewcommand{\thefigure}{D\arabic{figure}} \setcounter{figure}{0}
+\renewcommand{\thetable}{D\arabic{table}} \setcounter{table}{0}
+
+```{r, child = 'thesis/appendix-D-interaction-plots.Rmd'}
+```
+
+\clearpage
+
+
+<!-- Following APA format, precede figure and table numbers with the title letter of this appendix -->
+\renewcommand{\thefigure}{E\arabic{figure}} \setcounter{figure}{0}
+\renewcommand{\thetable}{E\arabic{table}} \setcounter{table}{0}
+
+```{r, child = 'thesis/appendix-E-Bayesian-analysis-results.Rmd'}
+```
+
+\clearpage
+
+
+
+# References
+
+::: {#refs}
+:::
+

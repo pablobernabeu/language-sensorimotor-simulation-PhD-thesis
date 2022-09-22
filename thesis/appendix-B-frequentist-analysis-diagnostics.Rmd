@@ -1,0 +1,274 @@
+
+
+# Appendix B: Diagnostics for the frequentist analyses {#appendix-B-frequentist-analysis-diagnostics}
+
+
+```{r}
+
+# This appendix is rendered by 'main.Rmd'. Thus, it inherits all the 
+# parameters set in 'main.Rmd' and the objects loaded therein.
+
+```
+
+
+Below, the convergence warnings and the non-normal residuals are first addressed generally, and then in more detail in the context of each study.
+
+
+## Convergence
+
+The challenge of convergence is well known in the area of mixed-effects models. These models often struggle to reach reliable-enough estimates due to an insufficiency of data relative to the complexity of the model [@batesFittingLinearMixedeffects2015; @baayenMixedeffectsModelingCrossed2008; @brauer2018a]. The solutions proposed range from the removal of random slopes under certain conditions [@matuschekBalancingTypeError2017] to the maintenance of random slopes in spite of convergence warnings, which seeks to avoid an inflation of the Type I error due to dependencies in the data [@brauer2018a; @singmann2019a]. 
+
+### The multiple-optimisers sanity check from `lme4::allFit()`
+
+Framed within the drive to maintain random slopes wherever possible, the developers of the 'lme4' package propose a sanity check that uses a part of the 'lme4' *engine* called 'optimiser'. Every model has a default optimiser, unless a specific one is chosen through `control = lmerControl(optimiser = '...')` (in `lmer` models) or `control = glmerControl(optimiser = '...')` (in `glmer` models). The seven widely-available optimisers are:
+
+- bobyqa
+- Nelder_Mead
+- nlminbwrap
+- nmkbw
+- optimx.L-BFGS-B
+- nloptwrap.NLOPT_LN_NELDERMEAD
+- nloptwrap.NLOPT_LN_BOBYQA
+
+To assess whether convergence warnings render the results invalid, or on the contrary, the results can be deemed valid in spite of the warnings, @batesPackageLme42021 suggest refitting models affected by convergence warnings with a variety of optimisers. The authors argue that if the different optimisers produce practically-equivalent results, the results are valid. For this purpose, the 'allFit' function from the 'lme4' package allows the refitting of models using a number of optimisers. To use the seven optimisers listed above, two extra packages were installed: 'dfoptim' and 'optimx' (see [lme4 manual](https://cran.r-project.org/web/packages/lme4/lme4.pdf)). The output from 'allFit' contains several statistics on the fixed and the random effects fitted by each optimiser (see [example](https://github.com/lme4/lme4/issues/512#issue-425198940)).
+
+The severity of convergence problems in each study will be examined below using the 'allFit' function from the 'lme4' package. 
+
+
+## Residual errors not normally distributed
+
+The residuals of the linear mixed-effects models in the three studies violated the assumption of normality. Even though linear mixed-effects models tend to be quite robust to deviations from normality [@kniefViolatingNormalityAssumption2021; @schielzethRobustnessLinearMixed2020], we sought to verify our results. To this end, two robust models were performed in each study, as described below.
+
+
+### Method A: *robustlmm* model
+
+The first method uses the R package 'robustlmm' v2.4-4 [@R-robustlmm]. To calculate the p values, we followed the procedure of @sleegersPupillometryHindsightBias2021, but used the Kenward-Roger method instead of Satterthwaite [see @luke2017a].
+
+
+### Method B: Inverse Gaussian model with identity link function
+
+We followed a method proposed by @loTransformNotTransform2015, based on generalized linear mixed-effects models (GLMM) implementing an identity link function. According to @loTransformNotTransform2015, the link function helps avoid directly transforming the dependent variable, which can hinder the interpretability of the results [also see @kniefViolatingNormalityAssumption2021].
+
+GLMMs require the use of families of distributions. @loTransformNotTransform2015 tested the Gaussian, Gamma and Inverse Gaussian families, with either an identity or an inverse link function. The authors found that the Inverse Gaussian family with an identity link yielded the most normal residuals. The Inverse Gaussian and the Gamma families only accept positive values in the outcome variable [see Table 15.2 in @foxGeneralizedLinearModels2016]. Due to this restriction, the dependent variable in the present model is raw RT, unlike the standardised RT that was used in the main analysis.
+
+*P* values were to be calculated through parametric bootstrapping, which is the most robust method for GLMMs, as the Kenward-Roger and Satterthwaite methods are not available for these models [@luke2017a; @R-afex].
+
+Neither Method A nor Method B could finally be used, as the code produced errors. These errors are shown in the corresponding scripts inside the 'model_diagnostics' folder in each study. Nonetheless, the residuals are shown below.
+
+
+
+## Study 1: Semantic priming
+
+### Convergence
+
+In the initial model, the optimiser used (the default one in 'lmerTest') was '`r semanticpriming_lmerTest@optinfo$optimiser`', and the convergence warning read: '`r semanticpriming_lmerTest@optinfo$conv$lme4$messages`'. 
+
+Based on the reanalysis using seven optimisers, Figure \@ref(fig:main-effects-semanticpriming-allFit-convergence) shows the fixed, main effects, and Figure \@ref(fig:interactions-semanticpriming-allFit-convergence) shows the fixed interactions.
+
+```{r main-effects-semanticpriming-allFit-convergence, fig.cap = 'Fixed, main effects from the semantic priming study fitted by seven optimisers.'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# semanticpriming/frequentist_analysis/model_diagnostics/semanticpriming_allFit_convergence.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/frequentist_analysis/model_diagnostics/plots/main_effects_semanticpriming_allFit_convergence.png'
+  ))
+
+```
+
+```{r interactions-semanticpriming-allFit-convergence, fig.cap = 'Fixed interaction effects from the semantic priming study fitted by seven optimisers.'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# semanticpriming/frequentist_analysis/model_diagnostics/semanticpriming_allFit_convergence.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/frequentist_analysis/model_diagnostics/plots/interactions_semanticpriming_allFit_convergence.png'
+  ))
+
+```
+
+
+### Residual errors not normally distributed
+
+Figure \@ref(fig:semanticpriming-residuals) shows the deviation from normality of the residuals of the linear mixed-effects model.
+
+```{r semanticpriming-residuals, fig.cap = 'Residuals of the linear mixed-effects model from the semantic priming study. \\linebreak KS = Kolmogorov-Smirnov test; TS = tail-sensitive confidence bands.', out.width = '65%'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# semanticpriming/frequentist_analysis/model_diagnostics/semanticpriming_residuals.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/frequentist_analysis/model_diagnostics/plots/semanticpriming_residuals.png'
+  ))
+
+```
+
+
+
+### Semantic priming model including visual similarity
+
+#### Convergence
+
+In the initial model, the optimiser used (the default one in 'lmerTest') was '`r semanticpriming_with_visualsimilarity_lmerTest@optinfo$optimiser`', and the convergence warning read: '`r semanticpriming_with_visualsimilarity_lmerTest@optinfo$conv$lme4$messages`'. 
+
+Based on the reanalysis using seven optimisers, Figure \@ref(fig:main-effects-semanticpriming-with-visualsimilarity-allFit-convergence) shows the fixed, main effects, and Figure \@ref(fig:interactions-semanticpriming-with-visualsimilarity-allFit-convergence) shows the fixed interactions.
+
+```{r main-effects-semanticpriming-with-visualsimilarity-allFit-convergence, fig.cap = 'Fixed, main effects from the semantic priming study fitted by seven optimisers.'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# semanticpriming/analysis_with_visualsimilarity/model_diagnostics/semanticpriming_with_visualsimilarity_allFit_convergence.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/main_effects_semanticpriming_with_visualsimilarity_allFit_convergence.png'
+  ))
+
+```
+
+```{r interactions-semanticpriming-with-visualsimilarity-allFit-convergence, fig.cap = 'Fixed interaction effects from the semantic priming study fitted by seven optimisers.'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# semanticpriming/analysis_with_visualsimilarity/model_diagnostics/semanticpriming_with_visualsimilarity_allFit_convergence.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/interactions_semanticpriming_with_visualsimilarity_allFit_convergence.png'
+  ))
+
+```
+
+
+#### Residual errors not normally distributed
+
+Figure \@ref(fig:semanticpriming-with-visualsimilarity-residuals) shows the deviation from normality of the residuals of the linear mixed-effects model.
+
+```{r semanticpriming-with-visualsimilarity-residuals, fig.cap = 'Residuals of the linear mixed-effects model from the semantic priming study. \\linebreak KS = Kolmogorov-Smirnov test; TS = tail-sensitive confidence bands.', out.width = '65%'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# semanticpriming/analysis_with_visualsimilarity/model_diagnostics/semanticpriming_with_visualsimilarity_residuals.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/semanticpriming_with_visualsimilarity_residuals.png'
+  ))
+
+```
+
+
+
+## Study 2: Semantic decision
+
+### Convergence
+
+In the initial model, the optimiser used (the default one in 'lmerTest') was '`r semanticdecision_lmerTest@optinfo$optimiser`', and the convergence warning read: '`r semanticdecision_lmerTest@optinfo$conv$lme4$messages`'. 
+
+Based on the reanalysis using seven optimisers, Figure \@ref(fig:main-effects-semanticdecision-allFit-convergence) shows the fixed, main effects, and Figure \@ref(fig:interactions-semanticdecision-allFit-convergence) shows the fixed interactions.
+
+```{r main-effects-semanticdecision-allFit-convergence, fig.cap = 'Fixed, main effects from the semantic decision study fitted by seven optimisers.'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# semanticdecision/frequentist_analysis/model_diagnostics/semanticdecision_allFit_convergence.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/frequentist_analysis/model_diagnostics/plots/main_effects_semanticdecision_allFit_convergence.png'
+  ))
+
+```
+
+```{r interactions-semanticdecision-allFit-convergence, fig.cap = 'Fixed interaction effects from the semantic decision study fitted by seven optimisers.'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# semanticdecision/frequentist_analysis/model_diagnostics/semanticdecision_allFit_convergence.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/frequentist_analysis/model_diagnostics/plots/interactions_semanticdecision_allFit_convergence.png'
+  ))
+
+```
+
+
+### Residual errors not normally distributed
+
+Figure \@ref(fig:semanticdecision-residuals) shows the deviation from normality of the residuals.
+
+```{r semanticdecision-residuals, fig.cap = 'Residuals of the linear mixed-effects model from the semantic decision study. \\linebreak KS = Kolmogorov-Smirnov test; TS = tail-sensitive confidence bands.', out.width = '65%'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# semanticdecision/frequentist_analysis/model_diagnostics/semanticdecision_residuals.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/frequentist_analysis/model_diagnostics/plots/semanticdecision_residuals.png'
+  ))
+
+```
+
+
+
+## Study 3: Lexical decision
+
+### Convergence
+
+In the initial model, the optimiser used (the default one in 'lmerTest') was '`r lexicaldecision_lmerTest@optinfo$optimiser`', and the convergence warning read: '`r lexicaldecision_lmerTest@optinfo$conv$lme4$messages`'. 
+
+Based on the reanalysis using seven optimisers, Figure \@ref(fig:main-effects-lexicaldecision-allFit-convergence) shows the fixed, main effects, and Figure \@ref(fig:interactions-lexicaldecision-allFit-convergence) shows the fixed interactions.
+
+```{r main-effects-lexicaldecision-allFit-convergence, fig.cap = 'Fixed, main effects from the lexical decision study fitted by seven optimisers.'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# lexicaldecision/frequentist_analysis/model_diagnostics/lexicaldecision_allFit_convergence.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/frequentist_analysis/model_diagnostics/plots/main_effects_lexicaldecision_allFit_convergence.png'
+  ))
+
+```
+
+```{r interactions-lexicaldecision-allFit-convergence, fig.cap = 'Fixed interaction effects from the lexical decision study fitted by seven optimisers.'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# lexicaldecision/frequentist_analysis/model_diagnostics/lexicaldecision_allFit_convergence.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/frequentist_analysis/model_diagnostics/plots/interactions_lexicaldecision_allFit_convergence.png'
+  ))
+
+```
+
+
+### Residual errors not normally distributed
+
+Figure \@ref(fig:lexicaldecision-residuals) shows the deviation from normality of the residuals.
+
+```{r lexicaldecision-residuals, fig.cap = 'Residuals of the linear mixed-effects model from the lexical decision study. The outliers in the residuals deviate from the coloured areas indicating an acceptable normality. \\linebreak KS = Kolmogorov-Smirnov test; TS = tail-sensitive confidence bands.', out.width = '65%'}
+
+# Display plot, which was produced in advance due to memory overload. Code available at:
+# lexicaldecision/frequentist_analysis/model_diagnostics/lexicaldecision_residuals.R
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/frequentist_analysis/model_diagnostics/plots/lexicaldecision_residuals.png'
+  ))
+
+```
+
+

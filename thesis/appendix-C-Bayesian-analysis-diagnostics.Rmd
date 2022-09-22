@@ -1,0 +1,327 @@
+
+
+# Appendix C: Diagnostics for the Bayesian analyses {#appendix-C-Bayesian-analysis-diagnostics}
+
+
+```{r}
+
+# This appendix is rendered by 'main.Rmd'. Thus, it inherits all the 
+# parameters set in 'main.Rmd' and the objects loaded therein.
+
+```
+
+
+This appendix presents diagnostics for the Bayesian analyses. In each study, prior predictive checks are presented before posterior predictive checks. Furthermore, in each of these checks, the models presented first have the default Gaussian distribution, whereas the next series have an exponentially modified Gaussian (dubbed 'ex-Gaussian') distribution with an identity link function (for details, see the section titled 'Distributions and prior predictive checks' in the main text). Eyeball estimation is used to assess the outcomes of these checks [for background on predictive checks and for alternative estimation procedures, see @gelmanPosteriorPredictiveAssessment1996; @moranPosteriorPredictiveNull2021; @schootBayesianStatisticsModelling2021]. One diagnostic not shown in this appendix is the $\widehat R$, which is shown in [\underline{Appendix E}](#appendix-E-Bayesian-analysis-results) instead.
+
+
+## Study 1: Semantic priming {#study1-bayesian-diagnostics}
+
+### Prior predictive checks
+
+Figures \@ref(fig:semanticpriming-priorpredictivecheck-informativepriors), \@ref(fig:semanticpriming-priorpredictivecheck-weaklyinformativepriors) and \@ref(fig:semanticpriming-priorpredictivecheck-diffusepriors) show the prior predictive checks for the Gaussian models. These plots show the maximum, mean and minimum values of the observed data ($y$) and those of the predicted distribution ($y_{rep}$, which stands for *rep*lications of the outcome). The way of interpreting these plots is by comparing the observed data to the predicted distribution. The specifics of this comparison vary across the three plots. First, in the upper plot, which shows the maximum values, the ideal scenario would show the observed maximum value ($y$) overlapping with the maximum value of the predicted distribution ($y_{rep}$). Second, in the middle plot, showing the mean values, the ideal scenario would show the observed mean value ($y$) overlapping with the mean value of the predicted distribution ($y_{rep}$). Last, in the lower plot, which shows the minimum values, the ideal scenario would have the observed minimum value ($y$) overlapping with the minimum value of the predicted distribution ($y_{rep}$). While the overlap need not be absolute, the closer the observed and the predicted values are on the X axis, the better. As such, the three predictive checks below---corresponding to models that used the default Gaussian distribution---show that the priors fitted the data acceptably but not very well.
+
+(ref:semanticpriming-priorpredictivecheck-informativepriors) Prior predictive checks for the Gaussian, informative prior model from the semantic priming study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticpriming-priorpredictivecheck-informativepriors, fig.cap = '(ref:semanticpriming-priorpredictivecheck-informativepriors)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors.pdf'
+  ))
+
+```
+
+
+(ref:semanticpriming-priorpredictivecheck-weaklyinformativepriors) Prior predictive checks for the Gaussian, weakly-informative prior model from the semantic priming study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticpriming-priorpredictivecheck-weaklyinformativepriors, fig.cap = '(ref:semanticpriming-priorpredictivecheck-weaklyinformativepriors)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors.pdf'
+  ))
+
+```
+
+
+(ref:semanticpriming-priorpredictivecheck-diffusepriors) Prior predictive checks for the Gaussian, diffuse prior model from the semantic priming study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticpriming-priorpredictivecheck-diffusepriors, fig.cap = '(ref:semanticpriming-priorpredictivecheck-diffusepriors)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors.pdf'
+  ))
+
+```
+
+
+In contrast to the above results, Figures \@ref(fig:semanticpriming-priorpredictivecheck-informativepriors-exgaussian), \@ref(fig:semanticpriming-priorpredictivecheck-weaklyinformativepriors-exgaussian) and \@ref(fig:semanticpriming-priorpredictivecheck-diffusepriors-exgaussian) demonstrate that, when an ex-Gaussian distribution was used, the priors fitted the data far better, which converged with the results of a similar comparison performed by @rodriguez-ferreiroSemanticPrimingSchizotypal2020 (see supplementary materials of the latter study).
+
+(ref:semanticpriming-priorpredictivecheck-informativepriors-exgaussian) Prior predictive checks for the ex-Gaussian, informative prior model from the semantic priming study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticpriming-priorpredictivecheck-informativepriors-exgaussian, fig.cap = '(ref:semanticpriming-priorpredictivecheck-informativepriors-exgaussian)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors_exgaussian.pdf'
+  ))
+
+```
+
+
+(ref:semanticpriming-priorpredictivecheck-weaklyinformativepriors-exgaussian) Prior predictive checks for the ex-Gaussian, weakly-informative prior model from the semantic priming study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticpriming-priorpredictivecheck-weaklyinformativepriors-exgaussian, fig.cap = '(ref:semanticpriming-priorpredictivecheck-weaklyinformativepriors-exgaussian)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf'
+  ))
+
+```
+
+
+(ref:semanticpriming-priorpredictivecheck-diffusepriors-exgaussian) Prior predictive checks for the ex-Gaussian, diffuse prior model from the semantic priming study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticpriming-priorpredictivecheck-diffusepriors-exgaussian, fig.cap = '(ref:semanticpriming-priorpredictivecheck-diffusepriors-exgaussian)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors_exgaussian.pdf'
+  ))
+
+```
+
+
+### Posterior predictive checks
+
+Based on the above results, the ex-Gaussian distribution was used in the final models. Figure \@ref(fig:semanticpriming-posteriorpredictivechecks-allpriors-exgaussian) presents the posterior predictive checks for the latter models. The interpretation of these plots is simple: the distributions of the observed ($y$) and the predicted data ($y_{rep}$) should be as similar as possible. As such, the plots below suggest that the results are trustworthy.
+
+(ref:semanticpriming-posteriorpredictivechecks-allpriors-exgaussian) Posterior predictive checks for the (ex-Gaussian) models from the semantic priming study. The observed data ($y$) and the predicted data ($y_{rep}$) almost entirely overlap with each other, demonstrating a very good fit.
+
+```{r semanticpriming-posteriorpredictivechecks-allpriors-exgaussian, fig.cap = '(ref:semanticpriming-posteriorpredictivechecks-allpriors-exgaussian)'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/bayesian_analysis/posterior_predictive_checks/plots/semanticpriming_posteriorpredictivechecks_allpriors_exgaussian.pdf'
+  ))
+
+```
+
+
+
+## Study 2: Semantic decision
+
+### Prior predictive checks
+
+Figures \@ref(fig:semanticdecision-priorpredictivecheck-informativepriors), \@ref(fig:semanticdecision-priorpredictivecheck-weaklyinformativepriors) and \@ref(fig:semanticdecision-priorpredictivecheck-diffusepriors) show the prior predictive checks for the Gaussian models (for background on these checks, see [\underline{Study 1}](#study1-bayesian-diagnostics)). The three plots---corresponding to models that used the default Gaussian distribution---show that the priors fitted the data acceptably but not very well.
+
+(ref:semanticdecision-priorpredictivecheck-informativepriors) Prior predictive checks for the Gaussian, informative prior model from the semantic decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticdecision-priorpredictivecheck-informativepriors, fig.cap = '(ref:semanticdecision-priorpredictivecheck-informativepriors)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors.pdf'
+  ))
+
+```
+
+
+(ref:semanticdecision-priorpredictivecheck-weaklyinformativepriors) Prior predictive checks for the Gaussian, weakly-informative prior model from the semantic decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticdecision-priorpredictivecheck-weaklyinformativepriors, fig.cap = '(ref:semanticdecision-priorpredictivecheck-weaklyinformativepriors)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors.pdf'
+  ))
+
+```
+
+
+(ref:semanticdecision-priorpredictivecheck-diffusepriors) Prior predictive checks for the Gaussian, diffuse prior model from the semantic decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticdecision-priorpredictivecheck-diffusepriors, fig.cap = '(ref:semanticdecision-priorpredictivecheck-diffusepriors)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors.pdf'
+  ))
+
+```
+
+
+In contrast to the results from the Gaussian models, Figures \@ref(fig:semanticdecision-priorpredictivecheck-informativepriors-exgaussian), \@ref(fig:semanticdecision-priorpredictivecheck-weaklyinformativepriors-exgaussian) and \@ref(fig:semanticdecision-priorpredictivecheck-diffusepriors-exgaussian) demonstrate that, when an ex-Gaussian distribution was used, the priors fitted the data far better, which converged with the results found in Study 1.
+
+(ref:semanticdecision-priorpredictivecheck-informativepriors-exgaussian) Prior predictive checks for the ex-Gaussian, informative prior model from the semantic decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticdecision-priorpredictivecheck-informativepriors-exgaussian, fig.cap = '(ref:semanticdecision-priorpredictivecheck-informativepriors-exgaussian)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors_exgaussian.pdf'
+  ))
+
+```
+
+
+(ref:semanticdecision-priorpredictivecheck-weaklyinformativepriors-exgaussian) Prior predictive checks for the ex-Gaussian, weakly-informative prior model from the semantic decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticdecision-priorpredictivecheck-weaklyinformativepriors-exgaussian, fig.cap = '(ref:semanticdecision-priorpredictivecheck-weaklyinformativepriors-exgaussian)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf'
+  ))
+
+```
+
+
+(ref:semanticdecision-priorpredictivecheck-diffusepriors-exgaussian) Prior predictive checks for the ex-Gaussian, diffuse prior model from the semantic decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticdecision-priorpredictivecheck-diffusepriors-exgaussian, fig.cap = '(ref:semanticdecision-priorpredictivecheck-diffusepriors-exgaussian)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors_exgaussian.pdf'
+  ))
+
+```
+
+
+### Posterior predictive checks
+
+Based on the above results, the ex-Gaussian distribution was used in the final models. Figure \@ref(fig:semanticdecision-posteriorpredictivechecks-allpriors-exgaussian) presents the posterior predictive checks for the latter models. The interpretation of these plots is simple: the distributions of the observed ($y$) and the predicted data ($y_{rep}$) should be as similar as possible. As such, the plots below suggest that the results are not entirely trustworthy. Indeed, the results themselves ([\underline{Appendix E}](#appendix-E-Bayesian-analysis-results)) are clearly not valid.
+
+(ref:semanticdecision-posteriorpredictivechecks-allpriors-exgaussian) Posterior predictive checks for the (ex-Gaussian) models from the semantic decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r semanticdecision-posteriorpredictivechecks-allpriors-exgaussian, fig.cap = '(ref:semanticdecision-posteriorpredictivechecks-allpriors-exgaussian)'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/bayesian_analysis/posterior_predictive_checks/plots/semanticdecision_posteriorpredictivechecks_allpriors_exgaussian.pdf'
+  ))
+
+```
+
+
+
+## Study 3: Lexical decision
+
+### Prior predictive checks
+
+Figures \@ref(fig:lexicaldecision-priorpredictivecheck-informativepriors), \@ref(fig:lexicaldecision-priorpredictivecheck-weaklyinformativepriors) and \@ref(fig:lexicaldecision-priorpredictivecheck-diffusepriors) show the prior predictive checks for the Gaussian models (for background on these checks, see [\underline{Study 1}](#study1-bayesian-diagnostics)). The three plots---corresponding to models that used the default Gaussian distribution---show that the priors fitted the data acceptably but not very well.
+
+(ref:lexicaldecision-priorpredictivecheck-informativepriors) Prior predictive checks for the Gaussian, informative prior model from the lexical decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r lexicaldecision-priorpredictivecheck-informativepriors, fig.cap = '(ref:lexicaldecision-priorpredictivecheck-informativepriors)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors.pdf'
+  ))
+
+```
+
+
+(ref:lexicaldecision-priorpredictivecheck-weaklyinformativepriors) Prior predictive checks for the Gaussian, weakly-informative prior model from the lexical decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r lexicaldecision-priorpredictivecheck-weaklyinformativepriors, fig.cap = '(ref:lexicaldecision-priorpredictivecheck-weaklyinformativepriors)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors.pdf'
+  ))
+
+```
+
+
+(ref:lexicaldecision-priorpredictivecheck-diffusepriors) Prior predictive checks for the Gaussian, diffuse prior model from the lexical decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r lexicaldecision-priorpredictivecheck-diffusepriors, fig.cap = '(ref:lexicaldecision-priorpredictivecheck-diffusepriors)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors.pdf'
+  ))
+
+```
+
+
+In contrast to the results from the Gaussian models, Figures \@ref(fig:lexicaldecision-priorpredictivecheck-informativepriors-exgaussian), \@ref(fig:lexicaldecision-priorpredictivecheck-weaklyinformativepriors-exgaussian) and \@ref(fig:lexicaldecision-priorpredictivecheck-diffusepriors-exgaussian) demonstrate that, when an ex-Gaussian distribution was used, the priors fitted the data far better, which converged with the results found in Studies 1 and 2.
+
+(ref:lexicaldecision-priorpredictivecheck-informativepriors-exgaussian) Prior predictive checks for the ex-Gaussian, informative prior model from the lexical decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r lexicaldecision-priorpredictivecheck-informativepriors-exgaussian, fig.cap = '(ref:lexicaldecision-priorpredictivecheck-informativepriors-exgaussian)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors_exgaussian.pdf'
+  ))
+
+```
+
+
+(ref:lexicaldecision-priorpredictivecheck-weaklyinformativepriors-exgaussian) Prior predictive checks for the ex-Gaussian, weakly-informative prior model from the lexical decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r lexicaldecision-priorpredictivecheck-weaklyinformativepriors-exgaussian, fig.cap = '(ref:lexicaldecision-priorpredictivecheck-weaklyinformativepriors-exgaussian)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf'
+  ))
+
+```
+
+
+(ref:lexicaldecision-priorpredictivecheck-diffusepriors-exgaussian) Prior predictive checks for the ex-Gaussian, diffuse prior model from the lexical decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r lexicaldecision-priorpredictivecheck-diffusepriors-exgaussian, fig.cap = '(ref:lexicaldecision-priorpredictivecheck-diffusepriors-exgaussian)', out.width = '80%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors_exgaussian.pdf'
+  ))
+
+```
+
+
+### Posterior predictive checks
+
+Based on the above results, the ex-Gaussian distribution was used in the final models. Figure \@ref(fig:lexicaldecision-posteriorpredictivechecks-allpriors-exgaussian) presents the posterior predictive checks for the latter models. The interpretation of these plots is simple: the distributions of the observed ($y$) and the predicted data ($y_{rep}$) should be as similar as possible. As such, the plots below suggest that the results are trustworthy.
+
+(ref:lexicaldecision-posteriorpredictivechecks-allpriors-exgaussian) Posterior predictive checks for the (ex-Gaussian) models from the lexical decision study. $y$ = observed data; $y_{rep}$ = predicted data.
+
+```{r lexicaldecision-posteriorpredictivechecks-allpriors-exgaussian, fig.cap = '(ref:lexicaldecision-posteriorpredictivechecks-allpriors-exgaussian)'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/bayesian_analysis/posterior_predictive_checks/plots/lexicaldecision_posteriorpredictivechecks_allpriors_exgaussian.pdf'
+  ))
+
+```
+
+

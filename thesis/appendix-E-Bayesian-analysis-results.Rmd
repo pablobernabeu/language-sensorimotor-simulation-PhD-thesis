@@ -1,0 +1,1289 @@
+
+
+# Appendix E: Results from the Bayesian analyses {#appendix-E-Bayesian-analysis-results}
+
+
+```{r}
+
+# This appendix is rendered by 'main.Rmd'. Thus, it inherits all the 
+# parameters set in 'main.Rmd' and the objects loaded therein.
+
+```
+
+
+This appendix presents extended results from the Bayesian analyses, containing a prior sensitivity analysis [@schootBayesianStatisticsModelling2021]. For each study, three tables are presented that contain the results from the informative prior model ($SD$ = 0.1), the weakly-informative prior model ($SD$ = 0.2) and the diffuse prior model ($SD$ = 0.3). All models had an exponentially modified Gaussian (dubbed ‘ex-Gaussian’) distribution with an identity link function (for background, see main text and [\underline{Appendix C}](#appendix-C-Bayesian-analysis-diagnostics)). The $\widehat R$ value is a convergence diagnostic that should ideally be smaller than 1.01 [@vehtariRanknormalizationFoldingLocalization2021].
+
+The approach used in this Bayesian analysis is that of estimation [@tendeiroReviewIssuesNull2019; also see @schmalzWhatBayesFactor2021]. Thus, the estimates were interpreted by considering the position of their credible intervals in relation to the predicted value of RT ($z$). That is, the closer an interval is to a value of 0 on the predicted RT ($z$), the smaller the effect of that predictor. For instance, an interval that is symmetrically centred on 0 indicates a very small effect, whereas---in comparison---an interval that does not include 0 indicates a far larger effect [for other examples of this approach, see @milekEavesdroppingHappinessRevisited2018; @preglaVariabilitySentenceComprehension2021; @rodriguez-ferreiroSemanticPrimingSchizotypal2020].
+
+
+## Study 1: Semantic priming
+
+Table \@ref(tab:semanticpriming-informativepriors-model) presents the results of the informative prior model, Table \@ref(tab:semanticpriming-weaklyinformativepriors-model) those of the weakly-informative prior model, and Table \@ref(tab:semanticpriming-diffusepriors-model) those of the diffuse prior model.
+
+```{r semanticpriming-informativepriors-model, results = 'asis'}
+
+# Rename effects in plain language and specify the random slopes
+# (if any) for each effect, in the footnote. For this purpose, 
+# superscripts are added to the names of the appropriate effects.
+# 
+# In the interactions below, word-level variables are presented 
+# first for the sake of consistency (the order does not affect 
+# the results in any way). Also in the interactions, double 
+# colons are used to inform the 'bayesian_model_table' function 
+# that the two terms in the interaction must be split into two 
+# lines.
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_attentional_control'] = 'Attentional control'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size'] = 'Vocabulary size $^{\\text{a}}$'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender'] = 'Gender $^{\\text{a}}$'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_target_word_frequency'] = 'Word frequency'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_target_number_syllables'] = 'Number of syllables'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff'] = 'Word-concreteness difference'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_cosine_similarity'] = 'Language-based similarity $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_visual_rating_diff'] = 'Visual-strength difference $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_recoded_interstimulus_interval'] = 'Stimulus onset asynchrony (SOA) $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff:z_vocabulary_size'] = 
+  'Word-concreteness difference :: Vocabulary size'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff:z_recoded_interstimulus_interval'] = 
+  'Word-concreteness difference : SOA'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff:z_recoded_participant_gender'] = 
+  'Word-concreteness difference : Gender'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_attentional_control:z_cosine_similarity'] = 
+  'Language-based similarity :: Attentional control'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_attentional_control:z_visual_rating_diff'] = 
+  'Visual-strength difference :: Attentional control'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_cosine_similarity'] = 
+  'Language-based similarity :: Vocabulary size'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_visual_rating_diff'] = 
+  'Visual-strength difference :: Vocabulary size'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_cosine_similarity'] = 
+  'Language-based similarity : Gender'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_visual_rating_diff'] = 
+  'Visual-strength difference : Gender'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_cosine_similarity:z_recoded_interstimulus_interval'] = 
+  'Language-based similarity : SOA $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_informativepriors_exgaussian$fixed) == 
+    'z_visual_rating_diff:z_recoded_interstimulus_interval'] = 
+  'Visual-strength difference : SOA $^{\\text{b}}$'
+
+
+# Create table (using custom function from the 'R_functions' folder)
+bayesian_model_table(
+  semanticpriming_summary_informativepriors_exgaussian, 
+  order_effects = c('(Intercept)',
+                    'Attentional control',
+                    'Vocabulary size $^{\\text{a}}$',
+                    'Gender $^{\\text{a}}$',
+                    'Word frequency',
+                    'Number of syllables',
+                    'Word-concreteness difference',
+                    'Language-based similarity $^{\\text{b}}$',
+                    'Visual-strength difference $^{\\text{b}}$',
+                    'Stimulus onset asynchrony (SOA) $^{\\text{b}}$',
+                    'Word-concreteness difference :: Vocabulary size',
+                    'Word-concreteness difference : SOA',
+                    'Word-concreteness difference : Gender',
+                    'Language-based similarity :: Attentional control',
+                    'Visual-strength difference :: Attentional control',
+                    'Language-based similarity :: Vocabulary size',
+                    'Visual-strength difference :: Vocabulary size',
+                    'Language-based similarity : Gender',
+                    'Visual-strength difference : Gender',
+                    'Language-based similarity : SOA $^{\\text{b}}$',
+                    'Visual-strength difference : SOA $^{\\text{b}}$'),
+  interaction_symbol_x = TRUE,
+  caption = 'Informative prior model for the semantic priming study.') %>%
+  # kable_styling(latex_options = 'scale_down') %>%
+  
+  # Group predictors under headings
+  pack_rows('Individual differences', 2, 4) %>% 
+  pack_rows('Target-word lexical covariates', 5, 6) %>% 
+  pack_rows('Prime--target relationship', 7, 9) %>% 
+  pack_rows('Task condition', 10, 10) %>% 
+  pack_rows('Interactions', 11, 21) %>% 
+  
+  # Place table close to designated position and highlight covariates
+  kable_styling(latex_options = c('hold_position', 'striped'), 
+                stripe_index = c(2, 5:7, 11:15)) %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CrI = credible interval. Shaded rows contain covariates. Some interactions',
+                           'are split over two lines, with the second line indented. \\\\linebreak', 
+                           '$^{\\\\text{a}}$ By-word random slopes were included for this effect.',
+                           '$^{\\\\text{b}}$ By-participant random slopes were included for this effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+```{r semanticpriming-weaklyinformativepriors-model, results = 'asis'}
+
+# Rename effects in plain language and specify the random slopes
+# (if any) for each effect, in the footnote. For this purpose, 
+# superscripts are added to the names of the appropriate effects.
+# 
+# In the interactions below, word-level variables are presented 
+# first for the sake of consistency (the order does not affect 
+# the results in any way). Also in the interactions, double 
+# colons are used to inform the 'bayesian_model_table' function 
+# that the two terms in the interaction must be split into two 
+# lines.
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_attentional_control'] = 'Attentional control'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size'] = 'Vocabulary size $^{\\text{a}}$'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender'] = 'Gender $^{\\text{a}}$'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_target_word_frequency'] = 'Word frequency'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_target_number_syllables'] = 'Number of syllables'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff'] = 'Word-concreteness difference'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_cosine_similarity'] = 'Language-based similarity $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_visual_rating_diff'] = 'Visual-strength difference $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_recoded_interstimulus_interval'] = 'Stimulus onset asynchrony (SOA) $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff:z_vocabulary_size'] = 
+  'Word-concreteness difference :: Vocabulary size'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff:z_recoded_interstimulus_interval'] = 
+  'Word-concreteness difference : SOA'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff:z_recoded_participant_gender'] = 
+  'Word-concreteness difference : Gender'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_attentional_control:z_cosine_similarity'] = 
+  'Language-based similarity :: Attentional control'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_attentional_control:z_visual_rating_diff'] = 
+  'Visual-strength difference :: Attentional control'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_cosine_similarity'] = 
+  'Language-based similarity :: Vocabulary size'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_visual_rating_diff'] = 
+  'Visual-strength difference :: Vocabulary size'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_cosine_similarity'] = 
+  'Language-based similarity : Gender'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_visual_rating_diff'] = 
+  'Visual-strength difference : Gender'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_cosine_similarity:z_recoded_interstimulus_interval'] = 
+  'Language-based similarity : SOA $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_visual_rating_diff:z_recoded_interstimulus_interval'] = 
+  'Visual-strength difference : SOA $^{\\text{b}}$'
+
+
+# Create table (using custom function from the 'R_functions' folder)
+bayesian_model_table(
+  semanticpriming_summary_weaklyinformativepriors_exgaussian, 
+  order_effects = c('(Intercept)',
+                    'Attentional control',
+                    'Vocabulary size $^{\\text{a}}$',
+                    'Gender $^{\\text{a}}$',
+                    'Word frequency',
+                    'Number of syllables',
+                    'Word-concreteness difference',
+                    'Language-based similarity $^{\\text{b}}$',
+                    'Visual-strength difference $^{\\text{b}}$',
+                    'Stimulus onset asynchrony (SOA) $^{\\text{b}}$',
+                    'Word-concreteness difference :: Vocabulary size',
+                    'Word-concreteness difference : SOA',
+                    'Word-concreteness difference : Gender',
+                    'Language-based similarity :: Attentional control',
+                    'Visual-strength difference :: Attentional control',
+                    'Language-based similarity :: Vocabulary size',
+                    'Visual-strength difference :: Vocabulary size',
+                    'Language-based similarity : Gender',
+                    'Visual-strength difference : Gender',
+                    'Language-based similarity : SOA $^{\\text{b}}$',
+                    'Visual-strength difference : SOA $^{\\text{b}}$'),
+  interaction_symbol_x = TRUE,
+  caption = 'Weakly-informative prior model for the semantic priming study.') %>%
+  # kable_styling(latex_options = 'scale_down') %>%
+  
+  # Group predictors under headings
+  pack_rows('Individual differences', 2, 4) %>% 
+  pack_rows('Target-word lexical covariates', 5, 6) %>% 
+  pack_rows('Prime--target relationship', 7, 9) %>% 
+  pack_rows('Task condition', 10, 10) %>% 
+  pack_rows('Interactions', 11, 21) %>% 
+  
+  # Place table close to designated position and highlight covariates
+  kable_styling(latex_options = c('hold_position', 'striped'), 
+                stripe_index = c(2, 5:7, 11:15)) %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CrI = credible interval. Shaded rows contain covariates. Some interactions',
+                           'are split over two lines, with the second line indented. \\\\linebreak', 
+                           '$^{\\\\text{a}}$ By-word random slopes were included for this effect.',
+                           '$^{\\\\text{b}}$ By-participant random slopes were included for this effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+```{r semanticpriming-diffusepriors-model, results = 'asis'}
+
+# Rename effects in plain language and specify the random slopes
+# (if any) for each effect, in the footnote. For this purpose, 
+# superscripts are added to the names of the appropriate effects.
+# 
+# In the interactions below, word-level variables are presented 
+# first for the sake of consistency (the order does not affect 
+# the results in any way). Also in the interactions, double 
+# colons are used to inform the 'bayesian_model_table' function 
+# that the two terms in the interaction must be split into two 
+# lines.
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_attentional_control'] = 'Attentional control'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_vocabulary_size'] = 'Vocabulary size $^{\\text{a}}$'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender'] = 'Gender $^{\\text{a}}$'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_target_word_frequency'] = 'Word frequency'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_target_number_syllables'] = 'Number of syllables'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff'] = 'Word-concreteness difference'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_cosine_similarity'] = 'Language-based similarity $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_visual_rating_diff'] = 'Visual-strength difference $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_recoded_interstimulus_interval'] = 'Stimulus onset asynchrony (SOA) $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff:z_vocabulary_size'] = 
+  'Word-concreteness difference :: Vocabulary size'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff:z_recoded_interstimulus_interval'] = 
+  'Word-concreteness difference : SOA'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_concreteness_diff:z_recoded_participant_gender'] = 
+  'Word-concreteness difference : Gender'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_attentional_control:z_cosine_similarity'] = 
+  'Language-based similarity :: Attentional control'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_attentional_control:z_visual_rating_diff'] = 
+  'Visual-strength difference :: Attentional control'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_cosine_similarity'] = 
+  'Language-based similarity :: Vocabulary size'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_visual_rating_diff'] = 
+  'Visual-strength difference :: Vocabulary size'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_cosine_similarity'] = 
+  'Language-based similarity : Gender'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_visual_rating_diff'] = 
+  'Visual-strength difference : Gender'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_cosine_similarity:z_recoded_interstimulus_interval'] = 
+  'Language-based similarity : SOA $^{\\text{b}}$'
+
+rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticpriming_summary_diffusepriors_exgaussian$fixed) == 
+    'z_visual_rating_diff:z_recoded_interstimulus_interval'] = 
+  'Visual-strength difference : SOA $^{\\text{b}}$'
+
+
+# Create table (using custom function from the 'R_functions' folder)
+bayesian_model_table(
+  semanticpriming_summary_diffusepriors_exgaussian, 
+  order_effects = c('(Intercept)',
+                    'Attentional control',
+                    'Vocabulary size $^{\\text{a}}$',
+                    'Gender $^{\\text{a}}$',
+                    'Word frequency',
+                    'Number of syllables',
+                    'Word-concreteness difference',
+                    'Language-based similarity $^{\\text{b}}$',
+                    'Visual-strength difference $^{\\text{b}}$',
+                    'Stimulus onset asynchrony (SOA) $^{\\text{b}}$',
+                    'Word-concreteness difference :: Vocabulary size',
+                    'Word-concreteness difference : SOA',
+                    'Word-concreteness difference : Gender',
+                    'Language-based similarity :: Attentional control',
+                    'Visual-strength difference :: Attentional control',
+                    'Language-based similarity :: Vocabulary size',
+                    'Visual-strength difference :: Vocabulary size',
+                    'Language-based similarity : Gender',
+                    'Visual-strength difference : Gender',
+                    'Language-based similarity : SOA $^{\\text{b}}$',
+                    'Visual-strength difference : SOA $^{\\text{b}}$'),
+  interaction_symbol_x = TRUE,
+  caption = 'Diffuse prior model for the semantic priming study.') %>%
+  # kable_styling(latex_options = 'scale_down') %>%
+  
+  # Group predictors under headings
+  pack_rows('Individual differences', 2, 4) %>% 
+  pack_rows('Target-word lexical covariates', 5, 6) %>% 
+  pack_rows('Prime--target relationship', 7, 9) %>% 
+  pack_rows('Task condition', 10, 10) %>% 
+  pack_rows('Interactions', 11, 21) %>% 
+  
+  # Place table close to designated position and highlight covariates
+  kable_styling(latex_options = c('hold_position', 'striped'), 
+                stripe_index = c(2, 5:7, 11:15)) %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CrI = credible interval. Shaded rows contain covariates. Some interactions',
+                           'are split over two lines, with the second line indented. \\\\linebreak', 
+                           '$^{\\\\text{a}}$ By-word random slopes were included for this effect.',
+                           '$^{\\\\text{b}}$ By-participant random slopes were included for this effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+\clearpage
+
+Figure \@ref(fig:semanticpriming-frequentist-bayesian-plot-allpriors-exgaussian) presents the posterior distribution of each effect in each model. The frequentist estimates are also shown to facilitate the comparison.
+
+```{r semanticpriming-frequentist-bayesian-plot-allpriors-exgaussian, fig.cap = 'Estimates from the frequentist analysis (in red) and from the Bayesian analysis (in blue) for the semantic priming study, in each model. The frequentist means (represented by points) are flanked by 95\\% confidence intervals. The Bayesian means (represented by vertical lines) are flanked by 95\\% credible intervals in light blue (in some cases, the interval is occluded by the bar of the mean).'}
+
+# Run plot through source() rather than directly in this R Markdown document
+# to preserve the format.
+
+source('semanticpriming/frequentist_bayesian_plots/semanticpriming_frequentist_bayesian_plots.R', 
+       local = TRUE)
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/frequentist_bayesian_plots/plots/semanticpriming_frequentist_bayesian_plot_allpriors_exgaussian.pdf'
+  ))
+
+```
+
+
+
+\clearpage
+
+## Study 2: Semantic decision
+
+Table \@ref(tab:semanticdecision-informativepriors-model) presents the results of the informative prior model, Table \@ref(tab:semanticdecision-weaklyinformativepriors-model) those of the weakly-informative prior model, and Table \@ref(tab:semanticdecision-diffusepriors-model) those of the diffuse prior model.
+
+```{r semanticdecision-informativepriors-model, results = 'asis'}
+
+# Rename effects in plain language and specify the random slopes
+# (if any) for each effect, in the footnote. For this purpose, 
+# superscripts are added to the names of the appropriate effects.
+# 
+# In the interactions below, word-level variables are presented 
+# first for the sake of consistency (the order does not affect 
+# the results in any way). Also in the interactions, double 
+# colons are used to inform the 'bayesian_model_table' function 
+# that the two terms in the interaction must be split into two 
+# lines.
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_information_uptake'] = 'Information uptake'
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size'] = 'Vocabulary size $^{\\text{a}}$'
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender'] = 'Gender $^{\\text{a}}$'
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_frequency'] = 'Word frequency'
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_orthographic_Levenshtein_distance'] = 'Orthographic Levenshtein distance'
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_concreteness'] = 'Word concreteness'
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_cooccurrence'] = "Word co-occurrence $^{\\text{b}}$"
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_visual_rating'] = 'Visual strength $^{\\text{b}}$'
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_vocabulary_size'] = 
+  'Word concreteness : Vocabulary size'
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_recoded_participant_gender'] = 
+  'Word concreteness : Gender'
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_information_uptake:z_word_cooccurrence'] = 
+  "Word co-occurrence : Information uptake"
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_information_uptake:z_visual_rating'] = 
+  'Visual strength : Information uptake'
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_word_cooccurrence'] = 
+  "Word co-occurrence : Vocabulary size"
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_visual_rating'] = 
+  'Visual strength : Vocabulary size'
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_word_cooccurrence'] = 
+  "Word co-occurrence : Gender"
+
+rownames(semanticdecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_visual_rating'] = 
+  'Visual strength : Gender'
+
+
+# Create table (using custom function from the 'R_functions' folder)
+bayesian_model_table(
+  semanticdecision_summary_informativepriors_exgaussian, 
+  order_effects = c('(Intercept)',
+                    'Information uptake',
+                    'Vocabulary size $^{\\text{a}}$',
+                    'Gender $^{\\text{a}}$',
+                    'Word frequency',
+                    'Orthographic Levenshtein distance',
+                    'Word concreteness',
+                    "Word co-occurrence $^{\\text{b}}$",
+                    'Visual strength $^{\\text{b}}$',
+                    'Word concreteness : Vocabulary size',
+                    'Word concreteness : Gender',
+                    "Word co-occurrence : Information uptake",
+                    'Visual strength : Information uptake',
+                    "Word co-occurrence : Vocabulary size",
+                    'Visual strength : Vocabulary size',
+                    "Word co-occurrence : Gender",
+                    'Visual strength : Gender'),
+  interaction_symbol_x = TRUE,
+  caption = 'Informative prior model for the semantic decision study.') %>%
+  # kable_styling(latex_options = 'scale_down') %>%
+  
+  # Group predictors under headings
+  pack_rows('Individual differences', 2, 4) %>% 
+  pack_rows('Lexicosemantic covariates', 5, 7) %>% 
+  pack_rows('Semantic variables', 8, 9) %>% 
+  pack_rows('Interactions', 10, 17) %>% 
+  
+  # Place table close to designated position and highlight covariates
+  kable_styling(latex_options = c('hold_position', 'striped'), 
+                stripe_index = c(2, 5:7, 10:13)) %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CrI = credible interval. Shaded rows contain covariates. Some interactions',
+                           'are split over two lines, with the second line indented. \\\\linebreak', 
+                           '$^{\\\\text{a}}$ By-word random slopes were included for this effect.',
+                           '$^{\\\\text{b}}$ By-participant random slopes were included for this effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+```{r semanticdecision-weaklyinformativepriors-model, results = 'asis'}
+
+# Rename effects in plain language and specify the random slopes
+# (if any) for each effect, in the footnote. For this purpose, 
+# superscripts are added to the names of the appropriate effects.
+# 
+# In the interactions below, word-level variables are presented 
+# first for the sake of consistency (the order does not affect 
+# the results in any way). Also in the interactions, double 
+# colons are used to inform the 'bayesian_model_table' function 
+# that the two terms in the interaction must be split into two 
+# lines.
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_information_uptake'] = 'Information uptake'
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size'] = 'Vocabulary size $^{\\text{a}}$'
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender'] = 'Gender $^{\\text{a}}$'
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_frequency'] = 'Word frequency'
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_orthographic_Levenshtein_distance'] = 'Orthographic Levenshtein distance'
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_concreteness'] = 'Word concreteness'
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_cooccurrence'] = "Word co-occurrence $^{\\text{b}}$"
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_visual_rating'] = 'Visual strength $^{\\text{b}}$'
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_vocabulary_size'] = 
+  'Word concreteness : Vocabulary size'
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_recoded_participant_gender'] = 
+  'Word concreteness : Gender'
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_information_uptake:z_word_cooccurrence'] = 
+  "Word co-occurrence : Information uptake"
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_information_uptake:z_visual_rating'] = 
+  'Visual strength : Information uptake'
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_word_cooccurrence'] = 
+  "Word co-occurrence : Vocabulary size"
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_visual_rating'] = 
+  'Visual strength : Vocabulary size'
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_word_cooccurrence'] = 
+  "Word co-occurrence : Gender"
+
+rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_visual_rating'] = 
+  'Visual strength : Gender'
+
+
+# Create table (using custom function from the 'R_functions' folder)
+bayesian_model_table(
+  semanticdecision_summary_weaklyinformativepriors_exgaussian, 
+  order_effects = c('(Intercept)',
+                    'Information uptake',
+                    'Vocabulary size $^{\\text{a}}$',
+                    'Gender $^{\\text{a}}$',
+                    'Word frequency',
+                    'Orthographic Levenshtein distance',
+                    'Word concreteness',
+                    "Word co-occurrence $^{\\text{b}}$",
+                    'Visual strength $^{\\text{b}}$',
+                    'Word concreteness : Vocabulary size',
+                    'Word concreteness : Gender',
+                    "Word co-occurrence : Information uptake",
+                    'Visual strength : Information uptake',
+                    "Word co-occurrence : Vocabulary size",
+                    'Visual strength : Vocabulary size',
+                    "Word co-occurrence : Gender",
+                    'Visual strength : Gender'),
+  interaction_symbol_x = TRUE,
+  caption = 'Weakly-informative prior model for the semantic decision study.') %>%
+  # kable_styling(latex_options = 'scale_down') %>%
+  
+  # Group predictors under headings
+  pack_rows('Individual differences', 2, 4) %>% 
+  pack_rows('Lexicosemantic covariates', 5, 7) %>% 
+  pack_rows('Semantic variables', 8, 9) %>% 
+  pack_rows('Interactions', 10, 17) %>% 
+  
+  # Place table close to designated position and highlight covariates
+  kable_styling(latex_options = c('hold_position', 'striped'), 
+                stripe_index = c(2, 5:7, 10:13)) %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CrI = credible interval. Shaded rows contain covariates. Some interactions',
+                           'are split over two lines, with the second line indented. \\\\linebreak', 
+                           '$^{\\\\text{a}}$ By-word random slopes were included for this effect.',
+                           '$^{\\\\text{b}}$ By-participant random slopes were included for this effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+```{r semanticdecision-diffusepriors-model, results = 'asis'}
+
+# Rename effects in plain language and specify the random slopes
+# (if any) for each effect, in the footnote. For this purpose, 
+# superscripts are added to the names of the appropriate effects.
+# 
+# In the interactions below, word-level variables are presented 
+# first for the sake of consistency (the order does not affect 
+# the results in any way). Also in the interactions, double 
+# colons are used to inform the 'bayesian_model_table' function 
+# that the two terms in the interaction must be split into two 
+# lines.
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_information_uptake'] = 'Information uptake'
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_vocabulary_size'] = 'Vocabulary size $^{\\text{a}}$'
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender'] = 'Gender $^{\\text{a}}$'
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_frequency'] = 'Word frequency'
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_orthographic_Levenshtein_distance'] = 'Orthographic Levenshtein distance'
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_concreteness'] = 'Word concreteness'
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_cooccurrence'] = "Word co-occurrence $^{\\text{b}}$"
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_visual_rating'] = 'Visual strength $^{\\text{b}}$'
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_vocabulary_size'] = 
+  'Word concreteness : Vocabulary size'
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_recoded_participant_gender'] = 
+  'Word concreteness : Gender'
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_information_uptake:z_word_cooccurrence'] = 
+  "Word co-occurrence : Information uptake"
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_information_uptake:z_visual_rating'] = 
+  'Visual strength : Information uptake'
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_word_cooccurrence'] = 
+  "Word co-occurrence : Vocabulary size"
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_vocabulary_size:z_visual_rating'] = 
+  'Visual strength : Vocabulary size'
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_word_cooccurrence'] = 
+  "Word co-occurrence : Gender"
+
+rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(semanticdecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_visual_rating'] = 
+  'Visual strength : Gender'
+
+
+# Create table (using custom function from the 'R_functions' folder)
+bayesian_model_table(
+  semanticdecision_summary_diffusepriors_exgaussian, 
+  order_effects = c('(Intercept)',
+                    'Information uptake',
+                    'Vocabulary size $^{\\text{a}}$',
+                    'Gender $^{\\text{a}}$',
+                    'Word frequency',
+                    'Orthographic Levenshtein distance',
+                    'Word concreteness',
+                    "Word co-occurrence $^{\\text{b}}$",
+                    'Visual strength $^{\\text{b}}$',
+                    'Word concreteness : Vocabulary size',
+                    'Word concreteness : Gender',
+                    "Word co-occurrence : Information uptake",
+                    'Visual strength : Information uptake',
+                    "Word co-occurrence : Vocabulary size",
+                    'Visual strength : Vocabulary size',
+                    "Word co-occurrence : Gender",
+                    'Visual strength : Gender'),
+  interaction_symbol_x = TRUE,
+  caption = 'Diffuse prior model for the semantic decision study.') %>%
+  # kable_styling(latex_options = 'scale_down') %>%
+  
+  # Group predictors under headings
+  pack_rows('Individual differences', 2, 4) %>% 
+  pack_rows('Lexicosemantic covariates', 5, 7) %>% 
+  pack_rows('Semantic variables', 8, 9) %>% 
+  pack_rows('Interactions', 10, 17) %>% 
+  
+  # Place table close to designated position and highlight covariates
+  kable_styling(latex_options = c('hold_position', 'striped'), 
+                stripe_index = c(2, 5:7, 10:13)) %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CrI = credible interval. Shaded rows contain covariates. Some interactions',
+                           'are split over two lines, with the second line indented. \\\\linebreak', 
+                           '$^{\\\\text{a}}$ By-word random slopes were included for this effect.',
+                           '$^{\\\\text{b}}$ By-participant random slopes were included for this effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+\clearpage
+
+Figure \@ref(fig:semanticdecision-frequentist-bayesian-plot-allpriors-exgaussian) presents the posterior distribution of each effect in each model. The frequentist estimates are also shown to facilitate the comparison.
+
+```{r semanticdecision-frequentist-bayesian-plot-allpriors-exgaussian, fig.cap = 'Estimates from the frequentist analysis (in red) and from the Bayesian analysis (in blue) for the semantic decision study, in each model. The frequentist means (represented by points) are flanked by 95\\% confidence intervals. The Bayesian means (represented by vertical lines) are flanked by 95\\% credible intervals in light blue (in some cases, the interval is occluded by the bar of the mean).'}
+
+# Run plot through source() rather than directly in this R Markdown document
+# to preserve the format.
+
+source('semanticdecision/frequentist_bayesian_plots/semanticdecision_frequentist_bayesian_plots.R', 
+       local = TRUE)
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/frequentist_bayesian_plots/plots/semanticdecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf'
+  ))
+
+```
+
+
+
+\clearpage
+
+## Study 3: Lexical decision
+
+Table \@ref(tab:lexicaldecision-informativepriors-model) presents the results of the informative prior model, Table \@ref(tab:lexicaldecision-weaklyinformativepriors-model) those of the weakly-informative prior model, and Table \@ref(tab:lexicaldecision-diffusepriors-model) those of the diffuse prior model.
+
+```{r lexicaldecision-informativepriors-model, results = 'asis'}
+
+# Rename effects in plain language and specify the random slopes
+# (if any) for each effect, in the footnote. For this purpose, 
+# superscripts are added to the names of the appropriate effects.
+# 
+# In the interactions below, word-level variables are presented 
+# first for the sake of consistency (the order does not affect 
+# the results in any way). Also in the interactions, double 
+# colons are used to inform the 'bayesian_model_table' function 
+# that the two terms in the interaction must be split into two 
+# lines.
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_vocabulary_age'] = 'Vocabulary age $^{\\text{a}}$'
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender'] = 'Gender $^{\\text{a}}$'
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_orthographic_Levenshtein_distance'] = 'Orthographic Levenshtein distance $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_concreteness'] = 'Word concreteness $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_frequency'] = 'Word frequency $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_visual_rating'] = 'Visual strength $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_vocabulary_age'] = 
+  'Word concreteness : Vocabulary age'
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_recoded_participant_gender'] = 
+  'Word concreteness : Gender'
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_vocabulary_age:z_word_frequency'] = 
+  'Word frequency : Vocabulary age'
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_vocabulary_age:z_visual_rating'] = 
+  'Visual strength : Vocabulary age'
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_word_frequency'] = 
+  'Word frequency : Gender'
+
+rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_informativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_visual_rating'] = 
+  'Visual strength : Gender'
+
+
+# Create table (using custom function from the 'R_functions' folder)
+bayesian_model_table(
+  lexicaldecision_summary_informativepriors_exgaussian, 
+  order_effects = c('(Intercept)',
+                    'Vocabulary age $^{\\text{a}}$',
+                    'Gender $^{\\text{a}}$',
+                    'Orthographic Levenshtein distance $^{\\text{b}}$',
+                    'Word concreteness $^{\\text{b}}$',
+                    'Word frequency $^{\\text{b}}$',
+                    'Visual strength $^{\\text{b}}$',
+                    'Word concreteness : Vocabulary age',
+                    'Word concreteness : Gender',
+                    'Word frequency : Vocabulary age',
+                    'Visual strength : Vocabulary age',
+                    'Word frequency : Gender',
+                    'Visual strength : Gender'),
+  interaction_symbol_x = TRUE,
+  caption = 'Informative prior model for the lexical decision study.') %>%
+  # kable_styling(latex_options = 'scale_down') %>%
+  
+  # Group predictors under headings
+  pack_rows('Individual differences', 2, 3) %>% 
+  pack_rows('Lexicosemantic covariates', 4, 5) %>% 
+  pack_rows('Semantic variables', 6, 7) %>% 
+  pack_rows('Interactions', 8, 13) %>% 
+  
+  # Place table close to designated position and highlight covariates
+  kable_styling(latex_options = c('hold_position', 'striped'), 
+                stripe_index = c(4:5, 8:9)) %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CrI = credible interval. Shaded rows contain covariates. \\\\linebreak', 
+                           '$^{\\\\text{a}}$ By-word random slopes were included for this effect.',
+                           '$^{\\\\text{b}}$ By-participant random slopes were included for this effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+```{r lexicaldecision-weaklyinformativepriors-model, results = 'asis'}
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_vocabulary_age'] = 'Vocabulary age $^{\\text{a}}$'
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender'] = 'Gender $^{\\text{a}}$'
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_orthographic_Levenshtein_distance'] = 'Orthographic Levenshtein distance $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_concreteness'] = 'Word concreteness $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_frequency'] = 'Word frequency $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_visual_rating'] = 'Visual strength $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_vocabulary_age'] = 
+  'Word concreteness : Vocabulary age'
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_recoded_participant_gender'] = 
+  'Word concreteness : Gender'
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_vocabulary_age:z_word_frequency'] = 
+  'Word frequency : Vocabulary age'
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_vocabulary_age:z_visual_rating'] = 
+  'Visual strength : Vocabulary age'
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_word_frequency'] = 
+  'Word frequency : Gender'
+
+rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_weaklyinformativepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_visual_rating'] = 
+  'Visual strength : Gender'
+
+
+# Create table (using custom function from the 'R_functions' folder)
+bayesian_model_table(
+  lexicaldecision_summary_weaklyinformativepriors_exgaussian, 
+  order_effects = c('(Intercept)',
+                    'Vocabulary age $^{\\text{a}}$',
+                    'Gender $^{\\text{a}}$',
+                    'Orthographic Levenshtein distance $^{\\text{b}}$',
+                    'Word concreteness $^{\\text{b}}$',
+                    'Word frequency $^{\\text{b}}$',
+                    'Visual strength $^{\\text{b}}$',
+                    'Word concreteness : Vocabulary age',
+                    'Word concreteness : Gender',
+                    'Word frequency : Vocabulary age',
+                    'Visual strength : Vocabulary age',
+                    'Word frequency : Gender',
+                    'Visual strength : Gender'),
+  interaction_symbol_x = TRUE,
+  caption = 'Weakly-informative prior model for the lexical decision study.') %>%
+  # kable_styling(latex_options = 'scale_down') %>%
+  
+  # Group predictors under headings
+  pack_rows('Individual differences', 2, 3) %>% 
+  pack_rows('Lexicosemantic covariates', 4, 5) %>% 
+  pack_rows('Semantic variables', 6, 7) %>% 
+  pack_rows('Interactions', 8, 13) %>% 
+  
+  # Place table close to designated position and highlight covariates
+  kable_styling(latex_options = c('hold_position', 'striped'), 
+                stripe_index = c(4:5, 8:9)) %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CrI = credible interval. Shaded rows contain covariates. \\\\linebreak', 
+                           '$^{\\\\text{a}}$ By-word random slopes were included for this effect.',
+                           '$^{\\\\text{b}}$ By-participant random slopes were included for this effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+```{r lexicaldecision-diffusepriors-model, results = 'asis'}
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_vocabulary_age'] = 'Vocabulary age $^{\\text{a}}$'
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender'] = 'Gender $^{\\text{a}}$'
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_orthographic_Levenshtein_distance'] = 'Orthographic Levenshtein distance $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_concreteness'] = 'Word concreteness $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_frequency'] = 'Word frequency $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_visual_rating'] = 'Visual strength $^{\\text{b}}$'
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_vocabulary_age'] = 
+  'Word concreteness : Vocabulary age'
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_word_concreteness:z_recoded_participant_gender'] = 
+  'Word concreteness : Gender'
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_vocabulary_age:z_word_frequency'] = 
+  'Word frequency : Vocabulary age'
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_vocabulary_age:z_visual_rating'] = 
+  'Visual strength : Vocabulary age'
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_word_frequency'] = 
+  'Word frequency : Gender'
+
+rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed)[
+  rownames(lexicaldecision_summary_diffusepriors_exgaussian$fixed) == 
+    'z_recoded_participant_gender:z_visual_rating'] = 
+  'Visual strength : Gender'
+
+
+# Create table (using custom function from the 'R_functions' folder)
+bayesian_model_table(
+  lexicaldecision_summary_diffusepriors_exgaussian, 
+  order_effects = c('(Intercept)',
+                    'Vocabulary age $^{\\text{a}}$',
+                    'Gender $^{\\text{a}}$',
+                    'Orthographic Levenshtein distance $^{\\text{b}}$',
+                    'Word concreteness $^{\\text{b}}$',
+                    'Word frequency $^{\\text{b}}$',
+                    'Visual strength $^{\\text{b}}$',
+                    'Word concreteness : Vocabulary age',
+                    'Word concreteness : Gender',
+                    'Word frequency : Vocabulary age',
+                    'Visual strength : Vocabulary age',
+                    'Word frequency : Gender',
+                    'Visual strength : Gender'),
+  interaction_symbol_x = TRUE,
+  caption = 'Diffuse prior model for the lexical decision study.') %>%
+  # kable_styling(latex_options = 'scale_down') %>%
+  
+  # Group predictors under headings
+  pack_rows('Individual differences', 2, 3) %>% 
+  pack_rows('Lexicosemantic covariates', 4, 5) %>% 
+  pack_rows('Semantic variables', 6, 7) %>% 
+  pack_rows('Interactions', 8, 13) %>% 
+  
+  # Place table close to designated position and highlight covariates
+  kable_styling(latex_options = c('hold_position', 'striped'), 
+                stripe_index = c(4:5, 8:9)) %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CrI = credible interval. Shaded rows contain covariates. \\\\linebreak', 
+                           '$^{\\\\text{a}}$ By-word random slopes were included for this effect.',
+                           '$^{\\\\text{b}}$ By-participant random slopes were included for this effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+\clearpage
+
+Figure \@ref(fig:lexicaldecision-frequentist-bayesian-plot-allpriors-exgaussian) presents the posterior distribution of each effect in each model. The frequentist estimates are also shown to facilitate the comparison.
+
+```{r lexicaldecision-frequentist-bayesian-plot-allpriors-exgaussian, fig.cap = 'Estimates from the frequentist analysis (in red) and from the Bayesian analysis (in blue) for the lexical decision study, in each model. The frequentist means (represented by points) are flanked by 95\\% confidence intervals. The Bayesian means (represented by vertical lines) are flanked by 95\\% credible intervals in light blue (in some cases, the interval is occluded by the bar of the mean).'}
+
+# Run plot through source() rather than directly in this R Markdown document
+# to preserve the format.
+
+source('lexicaldecision/frequentist_bayesian_plots/lexicaldecision_frequentist_bayesian_plots.R', 
+       local = TRUE)
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/frequentist_bayesian_plots/plots/lexicaldecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf'
+  ))
+
+```
+
+
+
+
+

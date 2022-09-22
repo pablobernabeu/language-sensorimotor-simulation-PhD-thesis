@@ -1,0 +1,299 @@
+
+
+# Appendix A: Selection of lexical covariates {#appendix-A-lexical-covariates}
+
+
+```{r}
+
+# This appendix is rendered by 'main.Rmd'. Thus, it inherits all the 
+# parameters set in 'main.Rmd' and the objects loaded therein.
+
+```
+
+
+Lexical covariates are usually used in conceptual processing studies due to the widespread connections among lexical and semantic variables [e.g., @pexman2018a; @petilli2021a; @wingfieldUnderstandingRoleLinguistic2022]. Including these covariates---or nuisance variables---in the model allows a more rigorous analysis of the predictors of interest [@sassenhagenCommonMisapplicationStatistical2016]. In each of the present studies, the covariates were selected out of a group of five variables that had been used as covariates in @wingfieldUnderstandingRoleLinguistic2022, and are widely used [e.g., @petilli2021a]. Some of these covariates were highly intercorrelated ($r$ > .70), as shown below. To avoid the problem of multicollinearity, the maximum zero-order correlation allowed between any two covariates was of $r$ = $\pm$.70 [@dormannCollinearityReviewMethods2013; @harrison2018a]. In cases of higher correlations, the covariate with the largest effect in the model, based on the estimate ($\upbeta$), was selected.
+
+In Studies 1 (semantic priming) and 2 (semantic decision), the lexical covariates were selected out of five variables, which mirrored those used by @wingfieldUnderstandingRoleLinguistic2022: namely, number of letters (i.e., orthographic length, which we computed in R), word frequency, number of syllables  [both the latter from @balota2007a], orthographic Levenshtein distance [@yarkoniMovingColtheartNew2008] and phonological Levenshtein distance [@suarezObservingNeighborhoodEffects2011; @yapVisualWordRecognition2009]. In Study 3 (lexical decision), the procedure was more particular, as it served two purposes. First, the variable that had the largest effect out of the five was selected as the language-based predictor of interest (see reason in [\underline{Study 3 in the main text}](#lexicaldecision)). Second, one variable was selected as a covariate among the remaining four.
+
+All the models included by-participant and by-word random intercepts, as well as by-participant random slopes for every predictor. Below, the correlations and the selection model are shown for each study.
+
+
+## Study 1: Semantic priming
+
+All lexical covariates considered in the semantic priming study were based on the target words. Figure \@ref(fig:semanticpriming-lexical-covariates-correlations) shows the zero-order correlations among the lexical covariates considered in the selection.
+
+```{r semanticpriming-lexical-covariates-correlations, fig.cap = 'Zero-order correlations among lexical covariates pretested in the semantic priming study.', fig.width = 6, fig.height = 3.5, out.width = '50%'}
+
+# Using the following variables...
+semanticpriming[, c('z_target_word_frequency', 'z_target_length', 
+                    'z_target_number_syllables',
+                    'z_target_phonological_Levenshtein_distance', 
+                    'z_target_orthographic_Levenshtein_distance')] %>%
+  
+  # renamed for the sake of clarity
+  rename('Word frequency' = z_target_word_frequency,
+         'Number of letters' = z_target_length,
+         'Number of syllables' = z_target_number_syllables,
+         'Phonological Levenshtein distance' = z_target_phonological_Levenshtein_distance,
+         'Orthographic Levenshtein distance' = z_target_orthographic_Levenshtein_distance) %>%
+  
+  # make correlation matrix (custom function from 'R_functions' folder)
+  correlation_matrix() + 
+  theme(plot.margin = unit(c(0, -0.5, 0.05, -3.78), 'in'))
+
+```
+
+
+Table \@ref(tab:semanticpriming-lexical-covariates-selection) shows the results of the selection model.
+
+```{r semanticpriming-lexical-covariates-selection, results = 'asis'}
+
+# Read in model and confidence intervals
+KR_summary_lexical_covariates_selection_semanticpriming_lmerTest = 
+  readRDS('semanticpriming/frequentist_analysis/lexical_covariates_selection/results/KR_summary_lexical_covariates_selection_semanticpriming_lmerTest.rds')
+
+confint_lexical_covariates_selection_semanticpriming_lmerTest = 
+  readRDS('semanticpriming/frequentist_analysis/lexical_covariates_selection/results/confint_lexical_covariates_selection_semanticpriming_lmerTest.rds')
+
+# Rename effects in plain language...
+# first, in the summary object
+rownames(KR_summary_lexical_covariates_selection_semanticpriming_lmerTest$coefficients) =
+  rownames(KR_summary_lexical_covariates_selection_semanticpriming_lmerTest$coefficients) %>%
+  str_replace(pattern = 'z_target_word_frequency', 
+              replacement = 'Word frequency') %>%
+  str_replace(pattern = 'z_target_length', 
+              replacement = 'Number of letters') %>%
+  str_replace(pattern = 'z_target_number_syllables', 
+              replacement = 'Number of syllables') %>%
+  str_replace(pattern = 'z_target_phonological_Levenshtein_distance', 
+              replacement = 'Phonological Levenshtein distance') %>%
+  str_replace(pattern = 'z_target_orthographic_Levenshtein_distance',
+              replacement = 'Orthographic Levenshtein distance')
+
+# next, in the confidence intervals object
+rownames(confint_lexical_covariates_selection_semanticpriming_lmerTest) =
+  rownames(confint_lexical_covariates_selection_semanticpriming_lmerTest) %>%
+  str_replace(pattern = 'z_target_word_frequency', 
+              replacement = 'Word frequency') %>%
+  str_replace(pattern = 'z_target_length', 
+              replacement = 'Number of letters') %>%
+  str_replace(pattern = 'z_target_number_syllables', 
+              replacement = 'Number of syllables') %>%
+  str_replace(pattern = 'z_target_phonological_Levenshtein_distance', 
+              replacement = 'Phonological Levenshtein distance') %>%
+  str_replace(pattern = 'z_target_orthographic_Levenshtein_distance',
+              replacement = 'Orthographic Levenshtein distance')
+
+
+# Create table (using custom function from the 'R_functions' folder)
+frequentist_model_table(
+  KR_summary_lexical_covariates_selection_semanticpriming_lmerTest, 
+  confidence_intervals = confint_lexical_covariates_selection_semanticpriming_lmerTest,
+  caption = 'Mixed-effects model for the selection of lexical covariates in the semantic priming study.') %>% 
+  # Place table close to designated position
+  kable_styling(latex_options = 'hold_position') %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CI = confidence interval. By-participant random slopes were included for',
+                           'every effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+Considering the maximum correlation allowed ($r$ = $\pm$.70) and the results of the model, the variables that will be included as covariates in the main analysis are word frequency and number of syllables.
+
+
+
+## Study 2: Semantic decision
+
+Figure \@ref(fig:semanticdecision-lexical-covariates-correlations) shows the zero-order correlations among the lexical covariates considered in the selection.
+
+```{r semanticdecision-lexical-covariates-correlations, fig.cap = 'Zero-order correlations for the lexical covariates pretested in the semantic decision study.', fig.width = 6, fig.height = 3.5, out.width = '50%'}
+
+# Using the following variables...
+semanticdecision[, c('z_word_frequency', 'z_word_length', 'z_number_syllables',
+                     'z_phonological_Levenshtein_distance', 
+                     'z_orthographic_Levenshtein_distance')] %>%
+  
+  # renamed for the sake of clarity
+  rename('Word frequency' = z_word_frequency,
+         'Number of letters' = z_word_length,
+         'Number of syllables' = z_number_syllables,
+         'Phonological Levenshtein distance' = z_phonological_Levenshtein_distance,
+         'Orthographic Levenshtein distance' = z_orthographic_Levenshtein_distance) %>%
+  
+  # make correlation matrix (custom function from 'R_functions' folder)
+  correlation_matrix() + 
+  theme(plot.margin = unit(c(0, -0.5, 0.05, -3.78), 'in'))
+
+```
+
+
+Table \@ref(tab:semanticdecision-lexical-covariates-selection) shows the results of the selection model.
+
+```{r semanticdecision-lexical-covariates-selection, results = 'asis'}
+
+# Read in model and confidence intervals
+KR_summary_lexical_covariates_selection_semanticdecision_lmerTest = 
+  readRDS('semanticdecision/frequentist_analysis/lexical_covariates_selection/results/KR_summary_lexical_covariates_selection_semanticdecision_lmerTest.rds')
+
+confint_lexical_covariates_selection_semanticdecision_lmerTest = 
+  readRDS('semanticdecision/frequentist_analysis/lexical_covariates_selection/results/confint_lexical_covariates_selection_semanticdecision_lmerTest.rds')
+
+# Rename effects in plain language...
+# first, in the summary object
+rownames(KR_summary_lexical_covariates_selection_semanticdecision_lmerTest$coefficients) =
+  rownames(KR_summary_lexical_covariates_selection_semanticdecision_lmerTest$coefficients) %>%
+  str_replace(pattern = 'z_word_frequency', 
+              replacement = 'Word frequency') %>%
+  str_replace(pattern = 'z_word_length', 
+              replacement = 'Number of letters') %>%
+  str_replace(pattern = 'z_number_syllables', 
+              replacement = 'Number of syllables') %>%
+  str_replace(pattern = 'z_orthographic_Levenshtein_distance',
+              replacement = 'Orthographic Levenshtein distance') %>%
+  str_replace(pattern = 'z_phonological_Levenshtein_distance', 
+              replacement = 'Phonological Levenshtein distance')
+
+# next, in the confidence intervals object
+rownames(confint_lexical_covariates_selection_semanticdecision_lmerTest) =
+  rownames(confint_lexical_covariates_selection_semanticdecision_lmerTest) %>%
+  str_replace(pattern = 'z_word_frequency', 
+              replacement = 'Word frequency') %>%
+  str_replace(pattern = 'z_word_length', 
+              replacement = 'Number of letters') %>%
+  str_replace(pattern = 'z_number_syllables', 
+              replacement = 'Number of syllables') %>%
+  str_replace(pattern = 'z_orthographic_Levenshtein_distance',
+              replacement = 'Orthographic Levenshtein distance') %>%
+  str_replace(pattern = 'z_phonological_Levenshtein_distance', 
+              replacement = 'Phonological Levenshtein distance')
+
+
+# Create table (using custom function from the 'R_functions' folder)
+frequentist_model_table(
+  KR_summary_lexical_covariates_selection_semanticdecision_lmerTest, 
+  confidence_intervals = confint_lexical_covariates_selection_semanticdecision_lmerTest,
+  caption = 'Mixed-effects model for the selection of lexical covariates in the semantic decision study.') %>% 
+  # Place table close to designated position
+  kable_styling(latex_options = 'hold_position') %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CI = confidence interval. By-participant random slopes were included for',
+                           'every effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+Considering the maximum correlation allowed ($r$ = $\pm$.70) and the results of the model, the variables that will be included as covariates in the main analysis are word frequency and orthographic Levenshtein distance.
+
+
+
+## Study 3: Lexical decision
+
+The selection model for Study 3 served a twofold purpose. First, the variable that had the largest effect out of the five was selected as the language-based predictor of interest (see reason in [\underline{Study 3 in the main text}](#lexicaldecision)). Second, one variable was selected as a covariate among the remaining four.
+
+Figure \@ref(fig:lexicaldecision-lexical-covariates-correlations) shows the zero-order correlations among the lexical covariates considered in the selection.
+
+```{r lexicaldecision-lexical-covariates-correlations, fig.cap = 'Zero-order correlations for the lexical covariates pretested in the lexical decision study.', fig.width = 6, fig.height = 3.5, out.width = '50%'}
+
+# Using the following variables...
+lexicaldecision[, c('z_word_frequency', 'z_word_length', 'z_number_syllables',
+                     'z_phonological_Levenshtein_distance', 
+                     'z_orthographic_Levenshtein_distance')] %>%
+  
+  # renamed for the sake of clarity
+  rename('Word frequency' = z_word_frequency,
+         'Number of letters' = z_word_length,
+         'Number of syllables' = z_number_syllables,
+         'Phonological Levenshtein distance' = z_phonological_Levenshtein_distance,
+         'Orthographic Levenshtein distance' = z_orthographic_Levenshtein_distance) %>%
+  
+  # Use plain names and specify 
+  
+  # make correlation matrix (custom function from 'R_functions' folder)
+  correlation_matrix() + 
+  theme(plot.margin = unit(c(0, 0, 0.05, -4.26), 'in'))
+
+```
+
+
+Table \@ref(tab:lexicaldecision-lexical-covariates-selection) shows the results of the selection model.
+
+```{r lexicaldecision-lexical-covariates-selection, results = 'asis'}
+
+# Read in model and confidence intervals
+KR_summary_lexical_covariates_selection_lexicaldecision_lmerTest = 
+  readRDS('lexicaldecision/frequentist_analysis/lexical_covariates_selection/results/KR_summary_lexical_covariates_selection_lexicaldecision_lmerTest.rds')
+
+confint_lexical_covariates_selection_lexicaldecision_lmerTest = 
+  readRDS('lexicaldecision/frequentist_analysis/lexical_covariates_selection/results/confint_lexical_covariates_selection_lexicaldecision_lmerTest.rds')
+
+# Rename effects in plain language...
+# first, in the summary object
+rownames(KR_summary_lexical_covariates_selection_lexicaldecision_lmerTest$coefficients) =
+  rownames(KR_summary_lexical_covariates_selection_lexicaldecision_lmerTest$coefficients) %>%
+  str_replace(pattern = 'z_word_frequency', 
+              replacement = 'Word frequency') %>%
+  str_replace(pattern = 'z_word_length', 
+              replacement = 'Number of letters') %>%
+  str_replace(pattern = 'z_number_syllables', 
+              replacement = 'Number of syllables') %>%
+  str_replace(pattern = 'z_orthographic_Levenshtein_distance',
+              replacement = 'Orthographic Levenshtein distance') %>%
+  str_replace(pattern = 'z_phonological_Levenshtein_distance', 
+              replacement = 'Phonological Levenshtein distance')
+
+# next, in the confidence intervals object
+rownames(confint_lexical_covariates_selection_lexicaldecision_lmerTest) =
+  rownames(confint_lexical_covariates_selection_lexicaldecision_lmerTest) %>%
+  str_replace(pattern = 'z_word_frequency', 
+              replacement = 'Word frequency') %>%
+  str_replace(pattern = 'z_word_length', 
+              replacement = 'Number of letters') %>%
+  str_replace(pattern = 'z_number_syllables', 
+              replacement = 'Number of syllables') %>%
+  str_replace(pattern = 'z_orthographic_Levenshtein_distance',
+              replacement = 'Orthographic Levenshtein distance') %>%
+  str_replace(pattern = 'z_phonological_Levenshtein_distance', 
+              replacement = 'Phonological Levenshtein distance')
+
+
+# Create table (using custom function from the 'R_functions' folder)
+frequentist_model_table(
+  KR_summary_lexical_covariates_selection_lexicaldecision_lmerTest, 
+  confidence_intervals = confint_lexical_covariates_selection_lexicaldecision_lmerTest,
+  caption = 'Mixed-effects model for the selection of lexical covariates in the lexical decision study.') %>% 
+  # Place table close to designated position
+  kable_styling(latex_options = 'hold_position') %>%
+  
+  # Footnote describing abbreviations, random slopes, etc. 
+  # LaTeX code used to format the text.
+  footnote(escape = FALSE, threeparttable = TRUE, general_title = '\\\\linebreak', 
+           general = paste('\\\\textit{Note}. $\\\\upbeta$ = Estimate based on $z$-scored predictors; \\\\textit{SE} = standard error;',
+                           'CI = confidence interval. By-participant random slopes were included for',
+                           'every effect.', 
+                           # After first line in the footnote, begin next lines with a dot-sized indent to correct default error.
+                           sep = ' \\\\linebreak \\\\phantom{.}'))
+
+```
+
+
+Considering the maximum correlation allowed ($r$ = $\pm$.70), the results of the model, and the use of word frequency as a predictor of interest in the model, the variable that will be included as a covariate in the main analysis is orthographic Levenshtein distance. 
+
+
+## Conclusion
+
+Word frequency presented the largest effect in the three models. Orthographic Levenshtein distance was the second largest effect in the semantic decision and the lexical decision studies, whereas its phonological counterpart was not significant in any of the studies. The latter difference makes sense, as participants read the stimulus words in the three studies [@brysbaertWordRecognitionII2022].
+
+

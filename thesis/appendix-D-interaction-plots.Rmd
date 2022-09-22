@@ -1,0 +1,141 @@
+
+
+# Appendix D: Further interaction plots {#appendix-D-interaction-plots}
+
+
+```{r}
+
+# This appendix is rendered by 'main.Rmd'. Thus, it inherits all the 
+# parameters set in 'main.Rmd' and the objects loaded therein.
+
+```
+
+
+Figures \@ref(fig:semanticpriming-interactions-with-attentional-control) -- \@ref(fig:lexicaldecision-interaction-word-concreteness-gender) present interactions that were not displayed in the main article. All interaction plots are based on the frequentist analysis.
+
+
+## Study 1: Semantic priming
+
+(ref:semanticpriming-interactions-with-attentional-control) Interactions of attentional control with language-based similarity (panel a) and with visual-strength difference (panel b). Attentional control is constrained to deciles (10 sections) in this plot, whereas in the statistical analysis it contained more values within the current range. $n$ = number of participants contained between deciles.
+
+```{r semanticpriming-interactions-with-attentional-control, fig.cap = '(ref:semanticpriming-interactions-with-attentional-control)', out.width = '85%'}
+
+# Run plot through source() rather than directly in this R Markdown document 
+# to preserve the italicised text.
+
+source('semanticpriming/frequentist_analysis/semanticpriming-interactions-with-attentional-control.R', 
+       local = TRUE)
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/frequentist_analysis/plots/semanticpriming-interactions-with-attentional-control.pdf'
+  ))
+
+```
+
+
+```{r semanticpriming-interaction-word-concreteness-difference-SOA, fig.cap = 'Interaction between stimulus onset asynchrony (SOA) and word-concreteness difference. SOA was analysed using $z$-scores, but for clarity, the basic labels are used in the legend.', out.width = '70%'}
+
+# Run plot through source() rather than directly in this R Markdown document 
+# to preserve the italicised text.
+
+source('semanticpriming/frequentist_analysis/semanticpriming-interactions-with-word-concreteness-difference.R', 
+       local = TRUE)
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-SOA.pdf'
+  ))
+
+```
+
+
+(ref:semanticpriming-interaction-word-concreteness-difference-vocabulary-size) Interaction between word-concreteness difference and vocabulary size. Vocabulary size is constrained to deciles in this plot, whereas in the statistical analysis it contained more values within the current range. $n$ = number of participants contained between deciles.
+
+```{r semanticpriming-interaction-word-concreteness-difference-vocabulary-size, fig.cap = '(ref:semanticpriming-interaction-word-concreteness-difference-vocabulary-size)', out.width = '90%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-vocabulary-size.pdf'
+  ))
+
+```
+
+
+(ref:semanticpriming-interaction-word-concreteness-difference-gender) Interaction between word-concreteness difference and gender. Gender was analysed using $z$-scores, but for clarity, the basic labels are used in the legend. $n$ = number of participants contained between deciles.
+
+```{r semanticpriming-interaction-word-concreteness-difference-gender, fig.cap = '(ref:semanticpriming-interaction-word-concreteness-difference-gender)', out.width = '70%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-gender.pdf'
+  ))
+
+```
+
+\clearpage
+
+
+
+## Study 2: Semantic decision
+
+(ref:semanticdecision-interactions-with-information-uptake) Interactions of information uptake with word co-occurrence (panel a) and with visual strength (panel b). Information uptake is constrained to deciles in this plot, whereas in the statistical analysis it contained more values within the current range. $n$ = number of participants contained between deciles.
+
+```{r semanticdecision-interactions-with-information-uptake, fig.cap = '(ref:semanticdecision-interactions-with-information-uptake)', out.width = '95%'}
+
+# Run plot through source() rather than directly in this R Markdown document 
+# to preserve the italicised text.
+
+source('semanticdecision/frequentist_analysis/semanticdecision-interactions-with-information-uptake.R', 
+       local = TRUE)
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/semanticdecision/frequentist_analysis/plots/semanticdecision-interactions-with-information-uptake.pdf'
+  ))
+
+```
+
+\clearpage
+
+
+
+## Study 3: Lexical decision
+
+(ref:lexicaldecision-interaction-word-concreteness-vocabulary-age) Interaction between word concreteness and vocabulary age. Vocabulary age is constrained to sextiles (6 sections) in this plot, whereas in the statistical analysis it contained more values within the current range. $n$ = number of participants contained between sextiles.
+
+```{r lexicaldecision-interaction-word-concreteness-vocabulary-age, fig.cap = '(ref:lexicaldecision-interaction-word-concreteness-vocabulary-age)', out.width = '90%'}
+
+# Run plot through source() rather than directly in this R Markdown document 
+# to preserve the italicised text.
+
+source('lexicaldecision/frequentist_analysis/lexicaldecision-interactions-with-word-concreteness.R', 
+       local = TRUE)
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-vocabulary-age.pdf'
+  ))
+
+```
+
+
+(ref:lexicaldecision-interaction-word-concreteness-gender) Interaction between word concreteness and gender. Gender was analysed using $z$-scores, but for clarity, the basic labels are used in the legend. $n$ = number of participants contained between sextiles.
+
+```{r lexicaldecision-interaction-word-concreteness-gender, fig.cap = '(ref:lexicaldecision-interaction-word-concreteness-gender)', out.width = '65%'}
+
+include_graphics(
+  paste0(
+    getwd(),  # Circumvent illegal characters in file path
+    '/lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-gender.pdf'
+  ))
+
+```
+
+
