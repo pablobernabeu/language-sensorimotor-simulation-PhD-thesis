@@ -1,13 +1,13 @@
 
 
-# Function for knitting 'manuscript/manuscript.Rmd' while circumventing common errors. The function offers 
+# Function for knitting 'thesis/thesis-core.Rmd' while circumventing common errors. The function offers 
 # deleting potential service files and folders before knitting.
 # Basis: https://github.com/pablobernabeu/knit-deleting-service-files/blob/main/knit_deleting_service_files.R
 
 
 knit_deleting_service_files =
   
-  function(file_name_with_extension = 'manuscript.Rmd', path = 'manuscript') {
+  function(file_name_with_extension = 'thesis-core.Rmd', path = 'thesis') {
     
     require(rmarkdown)
     

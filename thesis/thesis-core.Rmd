@@ -1,6 +1,6 @@
 ---
 title: 'This page and the next page should be manually removed. Template used: https://osf.io/g7dbt.'
-shorttitle:  'Subliminal Header'
+shorttitle: 'Subliminal Header'
 
 csl:                "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
 documentclass:      apa7
@@ -71,35 +71,29 @@ header-includes:
 
 \thispagestyle{empty}
 \begin{center}
-\vspace*{10mm}
-\textbf{\Large Language and sensorimotor simulation in conceptual processing: Multilevel analysis and statistical power }\\
+\vspace*{20mm}
+\textbf{\Large
+Language and sensorimotor simulation in conceptual  \\ 
+\bigskip
+processing: Multilevel analysis and statistical power
+}\\
 
-\bigskip
-\bigskip
-\bigskip
+\vspace*{26mm}
 
-\textbf{\large Pablo César de Juan Bernabéu }\\
+\textbf{\Large Pablo César de Juan Bernabéu }\\
 
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
+\vspace*{30mm}
 
-{\setstretch{1.7} 
+{\large \setstretch{1.7}
 This thesis is submitted for the degree of  \\
-Doctor of Philosophy in Psychology  \\
+Doctor of Philosophy in Psychology.  \\
+\bigskip
 \bigskip
 Lancaster University  \\
 Department of Psychology  \\
 \bigskip
-September 2022  \\
+\bigskip
+October 2022
 }
 \end{center}
 
@@ -108,7 +102,7 @@ September 2022  \\
 
 # Abstract
 
-Research has suggested that conceptual processing depends on both language-based and sensorimotor information. In this thesis, I investigate the nature of these systems and their interplay at three levels of the experimental structure---namely, individuals, words and tasks. In Chapter 1, I describe a multi-lab study to which I contributed. We could not replicate the object orientation effect, which has been used to test sensorimotor simulation. The effect did not appear across 18 languages and was not influenced by individual differences in mental rotation. Next, in Study 2, we drew on three existing data sets that implemented semantic priming, semantic decision and lexical decision. We extended these data sets with language-based and vision-based measures, and analysed their interactions with participants' vocabulary size, gender and presentation speed. The analysis had a conservative structure of fixed and random effects. First, language-based information was found to be more important than vision-based information. Second, in the semantic priming study---whose task required distinguishing between words and nonwords---, both language-based and vision-based information were more influential when words were presented faster. Third, a 'task-relevance advantage' was identified in higher-vocabulary participants. Specifically, in lexical decision, higher-vocabulary participants were more sensitive than lower-vocabulary participants to language-based information. In contrast, in semantic decision, higher-vocabulary participants were more sensitive to word concreteness. Fourth, a human-based measure of visual information was found to be superior to a computational measure. Last, we estimated the sample size required to investigate various effects. We found that 300 participants were sufficient to examine the effect of language-based information in words, whereas more than 1,000 participants were necessary for the effect of vision-based information and for the interactions of both former variables with vocabulary size, gender and presentation speed. This power analysis reveals the need to increase sample sizes for research on perceptual simulation and individual differences. 
+Research has suggested that conceptual processing depends on both language-based and sensorimotor information. In this thesis, I investigate the nature of these systems and their interplay at three levels of the experimental structure---namely, individuals, words and tasks. In Study 1, I contributed to a multi-lab replication of the object orientation effect, which has been used to test sensorimotor simulation. The effect did not appear across any of the 18 languages examined, and it was not influenced by individual differences in mental rotation. Next, in Study 2, we drew on three existing data sets that implemented semantic priming, semantic decision and lexical decision. We extended these data sets with measures of language-based and vision-based information, and analysed their interactions with participants' vocabulary size, gender and presentation speed. The analysis had a conservative structure of fixed and random effects. First, we found that language-based information was found to be more important than vision-based information. Second, in the semantic priming study---whose task required distinguishing between words and nonwords---, both language-based and vision-based information were more influential when words were presented faster. Third, a 'task-relevance advantage' was identified in higher-vocabulary participants. Specifically, in lexical decision, higher-vocabulary participants were more sensitive to language-based information than lower-vocabulary participants. In contrast, in semantic decision, higher-vocabulary participants were more sensitive to word concreteness. Fourth, we demonstrated the influence of the analytical method on the results. Last, we estimated the sample size required to investigate various effects. We found that 300 participants were sufficient to examine the effect of language-based information in words, whereas more than 1,000 participants were necessary for the effect of vision-based information and for the interactions of both former variables with vocabulary size, gender and presentation speed. This power analysis reveals the need to increase sample sizes for research on perceptual simulation and individual differences. 
 
 \newpage
 
@@ -125,20 +119,20 @@ Research has suggested that conceptual processing depends on both language-based
 
 # Acknowledgements
 
-Thank you to my supervisors, Dr. Dermot Lynott and Prof. Louise Connell, for your invaluable advice and encouragement. This journey has been as interesting and academically enriching for me as I had hoped. I equally value the personal support from Dermot when it was needed. Thank you also to all my colleagues, including the members of the Embodied Cognition Lab, as well as all the faculty and the students I worked with as a graduate teaching assistant. I very much enjoyed working with you, and learned a lot in the process. Thank you very much to the Department of Psychology at Lancaster University for their fundamental support throughout my PhD. Thank you to all the staff who have guided and helped me along the way, at my department, at the Information Systems Services, and at the High-End Computing facility. Thank you to Gorilla Experiment Builder and to Prolific for a joint grant that will support my next study, and for their help with my questions. Thank you to the Software Sustainability Institute, the RepliCATS project and the Open Scholarship Community Galway for their indulgence and their awards, which helped support my PhD research, broadened my professional horizons, and allowed me to meet many great people. Thank you to Dr. Margriet Groen and Prof. Max Louwerse for their attention as the examiners of my PhD. Last but not least, thank you to my friends and family for all the talks talked and the walks walked.
+Thank you to my supervisors, Dr. Dermot Lynott and Prof. Louise Connell, for your invaluable advice and encouragement. This journey has been as interesting and academically enriching for me as I had hoped. I equally value the personal support from Dermot when it was needed. Thank you also to all my colleagues, including the members of the Embodied Cognition Lab, as well as all the faculty and the students I worked with as a graduate teaching assistant. I very much enjoyed working with you, and learned a lot in the process. Thank you very much to the Department of Psychology at Lancaster University for their fundamental support throughout my PhD. Thank you to all the staff who have guided and helped me along the way, at my department, at the Information Systems Services, and at the High-End Computing facility. Thank you to Gorilla Experiment Builder and to Prolific for a joint grant that will support my next study, and for their help with my questions. Thank you to the Software Sustainability Institute, the RepliCATS project and the Open Scholarship Community Galway for their indulgence and their awards, which helped support my PhD research, broadened my professional horizons, and allowed me to meet many interesting people. Thank you to the contributors who addressed my questions on StackExchange and other forums. Thank you to Dr. Margriet Groen and Prof. Max Louwerse for their attention as the examiners of my PhD. Last but not least, thank you to my family and my friends for all the talks talked and the walks walked.
 
 \newpage
 
 
 # Declaration
 
-The work submitted in this thesis is my own and has not been submitted in substantially the same form towards the award of another degree or other qualifying work by myself or by any other person. All sources have been referenced. 
+The work submitted in this thesis is my own and has not been submitted in substantially the same form towards the award of another degree or other qualifying work by myself or by any other person. All sources have been referenced. Correspondence can be addressed to pcbernabeu@gmail.com.
 
-My role in Study 1 [@chenInvestigatingObjectOrientation2018a] has consisted of theoretical, methodological and stylistic suggestions in the design of the study, collection of data from 50 participants, and suggestions on the analysis of the data and the reporting of the results. My primary supervisor, Dr. Dermot Lynott, advised me throughout this project, and he contributed to the study himself. Next, I look forward to working on the last revisions of the manuscript.
+The materials needed to reproduce this thesis are available at https://osf.io/gt5uf. The creation of this document drew on the R packages 'rmarkdown' [@R-rmarkdown_b] and 'papaja' [@R-papaja], and the LaTeX package 'apa7' [@weiss-apa7-2022]. Whereas the aforementioned materials will not be further modified, readers can also consult the developing materials for Study 1 at https://osf.io/e428p, and those for Study 2 at https://osf.io/ueryq. 
 
-My role in Study 2 encompassed the entire study. Furthermore, my primary supervisor contributed to the design of the study and provided theoretical, methodological and stylistic advice throughout the project. My secondary supervisor, Prof. Louise Connell, contributed to the design of the study and provided occasional advice afterwards.
+My role in Study 1 [@chenInvestigatingObjectOrientation2018] has consisted of theoretical, methodological and stylistic suggestions during the design of the study, the creation of a video demonstrating our procedure (https://osf.io/h36wr), the collection of data from 50 participants (https://osf.io/waf48), and the provision of feedback about the analysis of the data and the reporting of the results. My primary supervisor, Dr. Dermot Lynott, advised me throughout this project, and he contributed to the study himself. Next, I look forward to working on the last revisions of the manuscript. The current manuscript is not included in this thesis due to its developing state. However, it has been shared with the examiners of my PhD (Dr. Margriet Groen and Prof. Max Louwerse), and the status of the project is available at https://psysciacc.org/002-object-orientation. The Stage I Registered Report was accepted in the journal Psychonomic Bulletin & Review, where the final version is expected to be published over the following months. 
 
-The materials for Study 1 are available at https://osf.io/e428p, while the materials for Study 2 are at https://osf.io/ueryq.
+My role in Study 2 spanned the entire study, comprising the design of the study, the collation and preprocessing of the data, the statistical analysis, the documentation (https://osf.io/ueryq/wiki) and the reporting. Furthermore, Dr. Dermot Lynott contributed to the design of the study and provided theoretical, methodological and stylistic advice throughout the project. My secondary supervisor, Prof. Louise Connell, contributed to the design of the study and provided occasional advice afterwards. 
 
 \newpage
 
@@ -271,22 +265,22 @@ lexicaldecision_summary_diffusepriors_exgaussian =
 
 
 
-```{r, child = 'thesis/Introduction.Rmd'}
+```{r, child = 'thesis/Chapter-1-Introduction.Rmd'}
 ```
 
 \clearpage
 
-```{r, child = 'thesis/Chapter-1.Rmd'}
+```{r, child = 'thesis/Chapter-2-Study-1.Rmd'}
 ```
 
 \clearpage
 
-```{r, child = 'thesis/Chapter-2.Rmd'}
+```{r, child = 'thesis/Chapter-3-Study-2.Rmd'}
 ```
 
 \clearpage
 
-```{r, child = 'thesis/General-discussion.Rmd'}
+```{r, child = 'thesis/Chapter-4-General-discussion.Rmd'}
 ```
 
 \clearpage
