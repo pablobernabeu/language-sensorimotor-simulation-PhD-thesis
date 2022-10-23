@@ -14,7 +14,7 @@
 Figures \@ref(fig:semanticpriming-interactions-with-attentional-control) -- \@ref(fig:lexicaldecision-interaction-word-concreteness-gender) present interactions that were not displayed in the main article. All interaction plots are based on the frequentist analysis.
 
 
-## Study 1: Semantic priming
+## Study 2.1: Semantic priming
 
 (ref:semanticpriming-interactions-with-attentional-control) Interactions of attentional control with language-based similarity (panel a) and with visual-strength difference (panel b). Attentional control is constrained to deciles (10 sections) in this plot, whereas in the statistical analysis it contained more values within the current range. $n$ = number of participants contained between deciles.
 
@@ -81,7 +81,7 @@ include_graphics(
 
 
 
-## Study 2: Semantic decision
+## Study 2.2: Semantic decision
 
 (ref:semanticdecision-interactions-with-information-uptake) Interactions of information uptake with word co-occurrence (panel a) and with visual strength (panel b). Information uptake is constrained to deciles in this plot, whereas in the statistical analysis it contained more values within the current range. $n$ = number of participants contained between deciles.
 
@@ -105,7 +105,7 @@ include_graphics(
 
 
 
-## Study 3: Lexical decision
+## Study 2.3: Lexical decision
 
 (ref:lexicaldecision-interaction-word-concreteness-vocabulary-age) Interaction between word concreteness and vocabulary age. Vocabulary age is constrained to sextiles (6 sections) in this plot, whereas in the statistical analysis it contained more values within the current range. $n$ = number of participants contained between sextiles.
 

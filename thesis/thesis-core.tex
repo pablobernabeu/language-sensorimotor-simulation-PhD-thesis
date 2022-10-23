@@ -1502,12 +1502,12 @@ Last, we will implement a recent recommendation from Petilli et al. (2021) to op
 
 Lexical covariates are usually used in conceptual processing studies due to the widespread connections among lexical and semantic variables (Petilli et al., 2021; e.g., Pexman \& Yap, 2018; Wingfield \& Connell, 2022a). Including these covariates---or nuisance variables---in the model allows a more rigorous analysis of the predictors of interest (Sassenhagen \& Alday, 2016). In each of the present studies, the covariates were selected out of a group of five variables that had been used as covariates in Wingfield and Connell (2022a), and are widely used (e.g., Petilli et al., 2021). Some of these covariates were highly intercorrelated (\(r\) \textgreater{} .70), as shown below. To avoid the problem of multicollinearity, the maximum zero-order correlation allowed between any two covariates was of \(r\) = \(\pm\).70 (Dormann et al., 2013; Harrison et al., 2018). In cases of higher correlations, the covariate with the largest effect in the model, based on the estimate (\(\upbeta\)), was selected.
 
-In Studies 1 (semantic priming) and 2 (semantic decision), the lexical covariates were selected out of five variables, which mirrored those used by Wingfield and Connell (2022a): namely, number of letters (i.e., orthographic length, which we computed in R), word frequency, number of syllables (both the latter from Balota et al., 2007), orthographic Levenshtein distance (Yarkoni et al., 2008) and phonological Levenshtein distance (Suárez et al., 2011; Yap \& Balota, 2009). In Study 3 (lexical decision), the procedure was more particular, as it served two purposes. First, the variable that had the largest effect out of the five was selected as the language-based predictor of interest (see reason in \protect\hyperlink{lexicaldecision}{\underline{Study 3 in the main text}}). Second, one variable was selected as a covariate among the remaining four.
+In Studies 2.1 (semantic priming) and 2,2 (semantic decision), the lexical covariates were selected out of five variables, which mirrored those used by Wingfield and Connell (2022a): namely, number of letters (i.e., orthographic length, which we computed in R), word frequency, number of syllables (both the latter from Balota et al., 2007), orthographic Levenshtein distance (Yarkoni et al., 2008) and phonological Levenshtein distance (Suárez et al., 2011; Yap \& Balota, 2009). In Study 2.3 (lexical decision), the procedure was more particular, as it served two purposes. First, the variable that had the largest effect out of the five was selected as the language-based predictor of interest (see reason in \protect\hyperlink{lexicaldecision}{\underline{Study 2.3 in the main text}}). Second, one variable was selected as a covariate among the remaining four.
 
 All the models included by-participant and by-word random intercepts, as well as by-participant random slopes for every predictor. Below, the correlations and the selection model are shown for each study.
 
-\hypertarget{study-1-semantic-priming}{%
-\subsection{Study 1: Semantic priming}\label{study-1-semantic-priming}}
+\hypertarget{study-2.1-semantic-priming-1}{%
+\subsection{Study 2.1: Semantic priming}\label{study-2.1-semantic-priming-1}}
 
 All lexical covariates considered in the semantic priming study were based on the target words. Figure \ref{fig:semanticpriming-lexical-covariates-correlations} shows the zero-order correlations among the lexical covariates considered in the selection.
 
@@ -1548,8 +1548,8 @@ Phonological Levenshtein distance & 0.02 & 0.01 & {}[-0.01, 0.04] & 1.28 & .199\
 
 Considering the maximum correlation allowed (\(r\) = \(\pm\).70) and the results of the model, the variables that will be included as covariates in the main analysis are word frequency and number of syllables.
 
-\hypertarget{study-2-semantic-decision}{%
-\subsection{Study 2: Semantic decision}\label{study-2-semantic-decision}}
+\hypertarget{study-2.2-semantic-decision-1}{%
+\subsection{Study 2.2: Semantic decision}\label{study-2.2-semantic-decision-1}}
 
 Figure \ref{fig:semanticdecision-lexical-covariates-correlations} shows the zero-order correlations among the lexical covariates considered in the selection.
 
@@ -1590,10 +1590,10 @@ Phonological Levenshtein distance & 0.01 & 0.01 & {}[-0.01, 0.03] & 0.91 & .361\
 
 Considering the maximum correlation allowed (\(r\) = \(\pm\).70) and the results of the model, the variables that will be included as covariates in the main analysis are word frequency and orthographic Levenshtein distance.
 
-\hypertarget{study-3-lexical-decision}{%
-\subsection{Study 3: Lexical decision}\label{study-3-lexical-decision}}
+\hypertarget{study-2.3-lexical-decision}{%
+\subsection{Study 2.3: Lexical decision}\label{study-2.3-lexical-decision}}
 
-The selection model for Study 3 served a twofold purpose. First, the variable that had the largest effect out of the five was selected as the language-based predictor of interest (see reason in \protect\hyperlink{lexicaldecision}{\underline{Study 3 in the main text}}). Second, one variable was selected as a covariate among the remaining four.
+The selection model for Study 2.3 served a twofold purpose. First, the variable that had the largest effect out of the five was selected as the language-based predictor of interest (see reason in \protect\hyperlink{lexicaldecision}{\underline{Study 2.3 in the main text}}). Second, one variable was selected as a covariate among the remaining four.
 
 Figure \ref{fig:lexicaldecision-lexical-covariates-correlations} shows the zero-order correlations among the lexical covariates considered in the selection.
 
@@ -1684,26 +1684,28 @@ The severity of convergence problems in each study will be examined below using 
 \hypertarget{residual-errors-not-normally-distributed}{%
 \subsection{Residual errors not normally distributed}\label{residual-errors-not-normally-distributed}}
 
-The residuals of the linear mixed-effects models in the three studies violated the assumption of normality. Even though linear mixed-effects models tend to be quite robust to deviations from normality (Knief \& Forstmeier, 2021; Schielzeth et al., 2020), we sought to verify our results. To this end, two robust models were performed in each study, as described below.
+The residuals of the linear mixed-effects models in the three studies violated the assumption of normality. Even though linear mixed-effects models tend to be quite robust to deviations from normality (Knief \& Forstmeier, 2021; Schielzeth et al., 2020), we sought to verify our results. To this end, we attempted to run robust models using two methods, neither of which worked. The methods are nonetheless described below.
 
 \hypertarget{method-a-robustlmm-model}{%
 \subsubsection{\texorpdfstring{Method A: \emph{robustlmm} model}{Method A: robustlmm model}}\label{method-a-robustlmm-model}}
 
-The first method uses the R package `robustlmm' v2.4-4 (Koller, 2016). To calculate the p values, we followed the procedure of Sleegers et al. (2021), but used the Kenward-Roger method instead of Satterthwaite (see Luke, 2017).
+The first method drew on the R package `robustlmm' v2.4-4 (Koller, 2016). To calculate the \(p\) values, we followed the procedure of Sleegers et al. (2021), but used the Kenward-Roger method instead of Satterthwaite (see Luke, 2017).
 
 \hypertarget{method-b-inverse-gaussian-model-with-identity-link-function}{%
 \subsubsection{Method B: Inverse Gaussian model with identity link function}\label{method-b-inverse-gaussian-model-with-identity-link-function}}
 
-We followed a method proposed by Lo and Andrews (2015), based on generalized linear mixed-effects models (GLMM) implementing an identity link function. According to Lo and Andrews (2015), the link function helps avoid directly transforming the dependent variable, which can hinder the interpretability of the results (also see Knief \& Forstmeier, 2021).
+In the second approach, we followed a method proposed by Lo and Andrews (2015), based on generalized linear mixed-effects models (GLMM) implementing an identity link function. According to Lo and Andrews (2015), the link function helps avoid directly transforming the dependent variable, which can hinder the interpretability of the results (also see Knief \& Forstmeier, 2021).
 
 GLMMs require the use of families of distributions. Lo and Andrews (2015) tested the Gaussian, Gamma and Inverse Gaussian families, with either an identity or an inverse link function. The authors found that the Inverse Gaussian family with an identity link yielded the most normal residuals. The Inverse Gaussian and the Gamma families only accept positive values in the outcome variable (see Table 15.2 in Fox, 2016). Due to this restriction, the dependent variable in the present model is raw RT, unlike the standardised RT that was used in the main analysis.
 
-\emph{P} values were to be calculated through parametric bootstrapping, which is the most robust method for GLMMs, as the Kenward-Roger and Satterthwaite methods are not available for these models (Luke, 2017; Singmann et al., 2021).
+\(P\) values were to be calculated through parametric bootstrapping, which is the most robust method for GLMMs, as the Kenward-Roger and Satterthwaite methods are not available for these models (Luke, 2017; Singmann et al., 2021).
 
-Neither Method A nor Method B could finally be used, as the code produced errors. These errors are shown in the corresponding scripts inside the `model\_diagnostics' folder in each study. Nonetheless, the residuals are shown below.
+Neither Method A nor Method B could finally be used, as the code produced errors. These errors are shown in the corresponding scripts inside the `model\_diagnostics' folder in each study.
 
-\hypertarget{study-1-semantic-priming-1}{%
-\subsection{Study 1: Semantic priming}\label{study-1-semantic-priming-1}}
+The residuals of the final models are shown in the corresponding sections below.
+
+\hypertarget{study-2.1-semantic-priming-2}{%
+\subsection{Study 2.1: Semantic priming}\label{study-2.1-semantic-priming-2}}
 
 \hypertarget{convergence-2}{%
 \subsubsection{Convergence}\label{convergence-2}}
@@ -1786,8 +1788,8 @@ Figure \ref{fig:semanticpriming-with-visualsimilarity-residuals} shows the devia
 \caption{Residuals of the linear mixed-effects model from the semantic priming study. \linebreak KS = Kolmogorov-Smirnov test; TS = tail-sensitive confidence bands.}\label{fig:semanticpriming-with-visualsimilarity-residuals}
 \end{figure}
 
-\hypertarget{study-2-semantic-decision-1}{%
-\subsection{Study 2: Semantic decision}\label{study-2-semantic-decision-1}}
+\hypertarget{study-2.2-semantic-decision-2}{%
+\subsection{Study 2.2: Semantic decision}\label{study-2.2-semantic-decision-2}}
 
 \hypertarget{convergence-4}{%
 \subsubsection{Convergence}\label{convergence-4}}
@@ -1828,8 +1830,8 @@ Figure \ref{fig:semanticdecision-residuals} shows the deviation from normality o
 \caption{Residuals of the linear mixed-effects model from the semantic decision study. \linebreak KS = Kolmogorov-Smirnov test; TS = tail-sensitive confidence bands.}\label{fig:semanticdecision-residuals}
 \end{figure}
 
-\hypertarget{study-3-lexical-decision-1}{%
-\subsection{Study 3: Lexical decision}\label{study-3-lexical-decision-1}}
+\hypertarget{study-2.3-lexical-decision-1}{%
+\subsection{Study 2.3: Lexical decision}\label{study-2.3-lexical-decision-1}}
 
 \hypertarget{convergence-5}{%
 \subsubsection{Convergence}\label{convergence-5}}
@@ -1881,7 +1883,7 @@ Figure \ref{fig:lexicaldecision-residuals} shows the deviation from normality of
 This appendix presents diagnostics for the Bayesian analyses. In each study, prior predictive checks are presented before posterior predictive checks. Furthermore, in each of these checks, the models presented first have the default Gaussian distribution, whereas the next series have an exponentially modified Gaussian (dubbed `ex-Gaussian') distribution with an identity link function (for details, see the section titled `Distributions and prior predictive checks' in the main text). Eyeball estimation is used to assess the outcomes of these checks (for background on predictive checks and for alternative estimation procedures, see Gelman et al., 1996; Moran et al., 2022; Schoot et al., 2021). One diagnostic not shown in this appendix is the \(\widehat R\), which is shown in \protect\hyperlink{appendix-E-Bayesian-analysis-results}{\underline{Appendix E}} instead.
 
 \hypertarget{study1-bayesian-diagnostics}{%
-\subsection{Study 1: Semantic priming}\label{study1-bayesian-diagnostics}}
+\subsection{Study 2.1: Semantic priming}\label{study1-bayesian-diagnostics}}
 
 \hypertarget{prior-predictive-checks}{%
 \subsubsection{Prior predictive checks}\label{prior-predictive-checks}}
@@ -1972,13 +1974,13 @@ Based on the above results, the ex-Gaussian distribution was used in the final m
 \caption{Posterior predictive checks for the (ex-Gaussian) models from the semantic priming study. The observed data (\(y\)) and the predicted data (\(y_{rep}\)) almost entirely overlap with each other, demonstrating a very good fit.}\label{fig:semanticpriming-posteriorpredictivechecks-allpriors-exgaussian}
 \end{figure}
 
-\hypertarget{study-2-semantic-decision-2}{%
-\subsection{Study 2: Semantic decision}\label{study-2-semantic-decision-2}}
+\hypertarget{study-2.2-semantic-decision-3}{%
+\subsection{Study 2.2: Semantic decision}\label{study-2.2-semantic-decision-3}}
 
 \hypertarget{prior-predictive-checks-1}{%
 \subsubsection{Prior predictive checks}\label{prior-predictive-checks-1}}
 
-Figures \ref{fig:semanticdecision-priorpredictivecheck-informativepriors}, \ref{fig:semanticdecision-priorpredictivecheck-weaklyinformativepriors} and \ref{fig:semanticdecision-priorpredictivecheck-diffusepriors} show the prior predictive checks for the Gaussian models (for background on these checks, see \protect\hyperlink{study1-bayesian-diagnostics}{\underline{Study 1}}). The three plots---corresponding to models that used the default Gaussian distribution---show that the priors fitted the data acceptably but not very well.
+Figures \ref{fig:semanticdecision-priorpredictivecheck-informativepriors}, \ref{fig:semanticdecision-priorpredictivecheck-weaklyinformativepriors} and \ref{fig:semanticdecision-priorpredictivecheck-diffusepriors} show the prior predictive checks for the Gaussian models (for background on these checks, see \protect\hyperlink{study1-bayesian-diagnostics}{\underline{Study 2.1}}). The three plots---corresponding to models that used the default Gaussian distribution---show that the priors fitted the data acceptably but not very well.
 
 
 
@@ -2013,7 +2015,7 @@ Figures \ref{fig:semanticdecision-priorpredictivecheck-informativepriors}, \ref{
 \caption{Prior predictive checks for the Gaussian, diffuse prior model from the semantic decision study. \(y\) = observed data; \(y_{rep}\) = predicted data.}\label{fig:semanticdecision-priorpredictivecheck-diffusepriors}
 \end{figure}
 
-In contrast to the results from the Gaussian models, Figures \ref{fig:semanticdecision-priorpredictivecheck-informativepriors-exgaussian}, \ref{fig:semanticdecision-priorpredictivecheck-weaklyinformativepriors-exgaussian} and \ref{fig:semanticdecision-priorpredictivecheck-diffusepriors-exgaussian} demonstrate that, when an ex-Gaussian distribution was used, the priors fitted the data far better, which converged with the results found in Study 1.
+In contrast to the results from the Gaussian models, Figures \ref{fig:semanticdecision-priorpredictivecheck-informativepriors-exgaussian}, \ref{fig:semanticdecision-priorpredictivecheck-weaklyinformativepriors-exgaussian} and \ref{fig:semanticdecision-priorpredictivecheck-diffusepriors-exgaussian} demonstrate that, when an ex-Gaussian distribution was used, the priors fitted the data far better, which converged with the results found in Study 2.1.
 
 
 
@@ -2064,13 +2066,13 @@ Based on the above results, the ex-Gaussian distribution was used in the final m
 \caption{Posterior predictive checks for the (ex-Gaussian) models from the semantic decision study. \(y\) = observed data; \(y_{rep}\) = predicted data.}\label{fig:semanticdecision-posteriorpredictivechecks-allpriors-exgaussian}
 \end{figure}
 
-\hypertarget{study-3-lexical-decision-2}{%
-\subsection{Study 3: Lexical decision}\label{study-3-lexical-decision-2}}
+\hypertarget{study-2.3-lexical-decision-2}{%
+\subsection{Study 2.3: Lexical decision}\label{study-2.3-lexical-decision-2}}
 
 \hypertarget{prior-predictive-checks-2}{%
 \subsubsection{Prior predictive checks}\label{prior-predictive-checks-2}}
 
-Figures \ref{fig:lexicaldecision-priorpredictivecheck-informativepriors}, \ref{fig:lexicaldecision-priorpredictivecheck-weaklyinformativepriors} and \ref{fig:lexicaldecision-priorpredictivecheck-diffusepriors} show the prior predictive checks for the Gaussian models (for background on these checks, see \protect\hyperlink{study1-bayesian-diagnostics}{\underline{Study 1}}). The three plots---corresponding to models that used the default Gaussian distribution---show that the priors fitted the data acceptably but not very well.
+Figures \ref{fig:lexicaldecision-priorpredictivecheck-informativepriors}, \ref{fig:lexicaldecision-priorpredictivecheck-weaklyinformativepriors} and \ref{fig:lexicaldecision-priorpredictivecheck-diffusepriors} show the prior predictive checks for the Gaussian models (for background on these checks, see \protect\hyperlink{study1-bayesian-diagnostics}{\underline{Study 2.1}}). The three plots---corresponding to models that used the default Gaussian distribution---show that the priors fitted the data acceptably but not very well.
 
 
 
@@ -2105,7 +2107,7 @@ Figures \ref{fig:lexicaldecision-priorpredictivecheck-informativepriors}, \ref{f
 \caption{Prior predictive checks for the Gaussian, diffuse prior model from the lexical decision study. \(y\) = observed data; \(y_{rep}\) = predicted data.}\label{fig:lexicaldecision-priorpredictivecheck-diffusepriors}
 \end{figure}
 
-In contrast to the results from the Gaussian models, Figures \ref{fig:lexicaldecision-priorpredictivecheck-informativepriors-exgaussian}, \ref{fig:lexicaldecision-priorpredictivecheck-weaklyinformativepriors-exgaussian} and \ref{fig:lexicaldecision-priorpredictivecheck-diffusepriors-exgaussian} demonstrate that, when an ex-Gaussian distribution was used, the priors fitted the data far better, which converged with the results found in Studies 1 and 2.
+In contrast to the results from the Gaussian models, Figures \ref{fig:lexicaldecision-priorpredictivecheck-informativepriors-exgaussian}, \ref{fig:lexicaldecision-priorpredictivecheck-weaklyinformativepriors-exgaussian} and \ref{fig:lexicaldecision-priorpredictivecheck-diffusepriors-exgaussian} demonstrate that, when an ex-Gaussian distribution was used, the priors fitted the data far better, which converged with the results found in Studies 2.1 and 2.2.
 
 
 
@@ -2166,8 +2168,8 @@ Based on the above results, the ex-Gaussian distribution was used in the final m
 
 Figures \ref{fig:semanticpriming-interactions-with-attentional-control} -- \ref{fig:lexicaldecision-interaction-word-concreteness-gender} present interactions that were not displayed in the main article. All interaction plots are based on the frequentist analysis.
 
-\hypertarget{study-1-semantic-priming-2}{%
-\subsection{Study 1: Semantic priming}\label{study-1-semantic-priming-2}}
+\hypertarget{study-2.1-semantic-priming-3}{%
+\subsection{Study 2.1: Semantic priming}\label{study-2.1-semantic-priming-3}}
 
 
 
@@ -2213,8 +2215,8 @@ Figures \ref{fig:semanticpriming-interactions-with-attentional-control} -- \ref{
 
 \clearpage
 
-\hypertarget{study-2-semantic-decision-3}{%
-\subsection{Study 2: Semantic decision}\label{study-2-semantic-decision-3}}
+\hypertarget{study-2.2-semantic-decision-4}{%
+\subsection{Study 2.2: Semantic decision}\label{study-2.2-semantic-decision-4}}
 
 
 
@@ -2229,8 +2231,8 @@ Figures \ref{fig:semanticpriming-interactions-with-attentional-control} -- \ref{
 
 \clearpage
 
-\hypertarget{study-3-lexical-decision-3}{%
-\subsection{Study 3: Lexical decision}\label{study-3-lexical-decision-3}}
+\hypertarget{study-2.3-lexical-decision-3}{%
+\subsection{Study 2.3: Lexical decision}\label{study-2.3-lexical-decision-3}}
 
 
 
@@ -2266,8 +2268,8 @@ This appendix presents extended results from the Bayesian analyses, containing a
 
 The approach used in this Bayesian analysis is that of estimation (Tendeiro \& Kiers, 2019; also see Schmalz et al., 2021). Thus, the estimates were interpreted by considering the position of their credible intervals in relation to the predicted value of RT (\(z\)). That is, the closer an interval is to a value of 0 on the predicted RT (\(z\)), the smaller the effect of that predictor. For instance, an interval that is symmetrically centred on 0 indicates a very small effect, whereas---in comparison---an interval that does not include 0 indicates a far larger effect (for other examples of this approach, see Milek et al., 2018; Pregla et al., 2021; Rodríguez-Ferreiro et al., 2020).
 
-\hypertarget{study-1-semantic-priming-3}{%
-\subsection{Study 1: Semantic priming}\label{study-1-semantic-priming-3}}
+\hypertarget{study-2.1-semantic-priming-4}{%
+\subsection{Study 2.1: Semantic priming}\label{study-2.1-semantic-priming-4}}
 
 Table \ref{tab:semanticpriming-informativepriors-model} presents the results of the informative prior model, Table \ref{tab:semanticpriming-weaklyinformativepriors-model} those of the weakly-informative prior model, and Table \ref{tab:semanticpriming-diffusepriors-model} those of the diffuse prior model.
 
@@ -2433,8 +2435,8 @@ Figure \ref{fig:semanticpriming-frequentist-bayesian-plot-allpriors-exgaussian} 
 
 \clearpage
 
-\hypertarget{study-2-semantic-decision-4}{%
-\subsection{Study 2: Semantic decision}\label{study-2-semantic-decision-4}}
+\hypertarget{study-2.2-semantic-decision-5}{%
+\subsection{Study 2.2: Semantic decision}\label{study-2.2-semantic-decision-5}}
 
 Table \ref{tab:semanticdecision-informativepriors-model} presents the results of the informative prior model, Table \ref{tab:semanticdecision-weaklyinformativepriors-model} those of the weakly-informative prior model, and Table \ref{tab:semanticdecision-diffusepriors-model} those of the diffuse prior model.
 
@@ -2582,8 +2584,8 @@ Figure \ref{fig:semanticdecision-frequentist-bayesian-plot-allpriors-exgaussian}
 
 \clearpage
 
-\hypertarget{study-3-lexical-decision-4}{%
-\subsection{Study 3: Lexical decision}\label{study-3-lexical-decision-4}}
+\hypertarget{study-2.3-lexical-decision-4}{%
+\subsection{Study 2.3: Lexical decision}\label{study-2.3-lexical-decision-4}}
 
 Table \ref{tab:lexicaldecision-informativepriors-model} presents the results of the informative prior model, Table \ref{tab:lexicaldecision-weaklyinformativepriors-model} those of the weakly-informative prior model, and Table \ref{tab:lexicaldecision-diffusepriors-model} those of the diffuse prior model.
 

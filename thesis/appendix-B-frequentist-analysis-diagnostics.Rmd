@@ -37,27 +37,29 @@ The severity of convergence problems in each study will be examined below using 
 
 ## Residual errors not normally distributed
 
-The residuals of the linear mixed-effects models in the three studies violated the assumption of normality. Even though linear mixed-effects models tend to be quite robust to deviations from normality [@kniefViolatingNormalityAssumption2021; @schielzethRobustnessLinearMixed2020], we sought to verify our results. To this end, two robust models were performed in each study, as described below.
+The residuals of the linear mixed-effects models in the three studies violated the assumption of normality. Even though linear mixed-effects models tend to be quite robust to deviations from normality [@kniefViolatingNormalityAssumption2021; @schielzethRobustnessLinearMixed2020], we sought to verify our results. To this end, we attempted to run robust models using two methods, neither of which worked. The methods are nonetheless described below.
 
 
 ### Method A: *robustlmm* model
 
-The first method uses the R package 'robustlmm' v2.4-4 [@R-robustlmm]. To calculate the p values, we followed the procedure of @sleegersPupillometryHindsightBias2021, but used the Kenward-Roger method instead of Satterthwaite [see @luke2017a].
+The first method drew on the R package 'robustlmm' v2.4-4 [@R-robustlmm]. To calculate the $p$ values, we followed the procedure of @sleegersPupillometryHindsightBias2021, but used the Kenward-Roger method instead of Satterthwaite [see @luke2017a].
 
 
 ### Method B: Inverse Gaussian model with identity link function
 
-We followed a method proposed by @loTransformNotTransform2015, based on generalized linear mixed-effects models (GLMM) implementing an identity link function. According to @loTransformNotTransform2015, the link function helps avoid directly transforming the dependent variable, which can hinder the interpretability of the results [also see @kniefViolatingNormalityAssumption2021].
+In the second approach, we followed a method proposed by @loTransformNotTransform2015, based on generalized linear mixed-effects models (GLMM) implementing an identity link function. According to @loTransformNotTransform2015, the link function helps avoid directly transforming the dependent variable, which can hinder the interpretability of the results [also see @kniefViolatingNormalityAssumption2021].
 
 GLMMs require the use of families of distributions. @loTransformNotTransform2015 tested the Gaussian, Gamma and Inverse Gaussian families, with either an identity or an inverse link function. The authors found that the Inverse Gaussian family with an identity link yielded the most normal residuals. The Inverse Gaussian and the Gamma families only accept positive values in the outcome variable [see Table 15.2 in @foxGeneralizedLinearModels2016]. Due to this restriction, the dependent variable in the present model is raw RT, unlike the standardised RT that was used in the main analysis.
 
-*P* values were to be calculated through parametric bootstrapping, which is the most robust method for GLMMs, as the Kenward-Roger and Satterthwaite methods are not available for these models [@luke2017a; @R-afex].
+$P$ values were to be calculated through parametric bootstrapping, which is the most robust method for GLMMs, as the Kenward-Roger and Satterthwaite methods are not available for these models [@luke2017a; @R-afex].
 
-Neither Method A nor Method B could finally be used, as the code produced errors. These errors are shown in the corresponding scripts inside the 'model_diagnostics' folder in each study. Nonetheless, the residuals are shown below.
+Neither Method A nor Method B could finally be used, as the code produced errors. These errors are shown in the corresponding scripts inside the 'model_diagnostics' folder in each study. 
+
+The residuals of the final models are shown in the corresponding sections below.
 
 
 
-## Study 1: Semantic priming
+## Study 2.1: Semantic priming
 
 ### Convergence
 
@@ -165,7 +167,7 @@ include_graphics(
 
 
 
-## Study 2: Semantic decision
+## Study 2.2: Semantic decision
 
 ### Convergence
 
@@ -219,7 +221,7 @@ include_graphics(
 
 
 
-## Study 3: Lexical decision
+## Study 2.3: Lexical decision
 
 ### Convergence
 

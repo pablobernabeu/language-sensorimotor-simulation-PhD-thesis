@@ -14,7 +14,7 @@
 This appendix presents diagnostics for the Bayesian analyses. In each study, prior predictive checks are presented before posterior predictive checks. Furthermore, in each of these checks, the models presented first have the default Gaussian distribution, whereas the next series have an exponentially modified Gaussian (dubbed 'ex-Gaussian') distribution with an identity link function (for details, see the section titled 'Distributions and prior predictive checks' in the main text). Eyeball estimation is used to assess the outcomes of these checks [for background on predictive checks and for alternative estimation procedures, see @gelmanPosteriorPredictiveAssessment1996; @moranPosteriorPredictiveNull2022; @schootBayesianStatisticsModelling2021]. One diagnostic not shown in this appendix is the $\widehat R$, which is shown in [\underline{Appendix E}](#appendix-E-Bayesian-analysis-results) instead.
 
 
-## Study 1: Semantic priming {#study1-bayesian-diagnostics}
+## Study 2.1: Semantic priming {#study1-bayesian-diagnostics}
 
 ### Prior predictive checks
 
@@ -118,11 +118,11 @@ include_graphics(
 
 
 
-## Study 2: Semantic decision
+## Study 2.2: Semantic decision
 
 ### Prior predictive checks
 
-Figures \@ref(fig:semanticdecision-priorpredictivecheck-informativepriors), \@ref(fig:semanticdecision-priorpredictivecheck-weaklyinformativepriors) and \@ref(fig:semanticdecision-priorpredictivecheck-diffusepriors) show the prior predictive checks for the Gaussian models (for background on these checks, see [\underline{Study 1}](#study1-bayesian-diagnostics)). The three plots---corresponding to models that used the default Gaussian distribution---show that the priors fitted the data acceptably but not very well.
+Figures \@ref(fig:semanticdecision-priorpredictivecheck-informativepriors), \@ref(fig:semanticdecision-priorpredictivecheck-weaklyinformativepriors) and \@ref(fig:semanticdecision-priorpredictivecheck-diffusepriors) show the prior predictive checks for the Gaussian models (for background on these checks, see [\underline{Study 2.1}](#study1-bayesian-diagnostics)). The three plots---corresponding to models that used the default Gaussian distribution---show that the priors fitted the data acceptably but not very well.
 
 (ref:semanticdecision-priorpredictivecheck-informativepriors) Prior predictive checks for the Gaussian, informative prior model from the semantic decision study. $y$ = observed data; $y_{rep}$ = predicted data.
 
@@ -163,7 +163,7 @@ include_graphics(
 ```
 
 
-In contrast to the results from the Gaussian models, Figures \@ref(fig:semanticdecision-priorpredictivecheck-informativepriors-exgaussian), \@ref(fig:semanticdecision-priorpredictivecheck-weaklyinformativepriors-exgaussian) and \@ref(fig:semanticdecision-priorpredictivecheck-diffusepriors-exgaussian) demonstrate that, when an ex-Gaussian distribution was used, the priors fitted the data far better, which converged with the results found in Study 1.
+In contrast to the results from the Gaussian models, Figures \@ref(fig:semanticdecision-priorpredictivecheck-informativepriors-exgaussian), \@ref(fig:semanticdecision-priorpredictivecheck-weaklyinformativepriors-exgaussian) and \@ref(fig:semanticdecision-priorpredictivecheck-diffusepriors-exgaussian) demonstrate that, when an ex-Gaussian distribution was used, the priors fitted the data far better, which converged with the results found in Study 2.1.
 
 (ref:semanticdecision-priorpredictivecheck-informativepriors-exgaussian) Prior predictive checks for the ex-Gaussian, informative prior model from the semantic decision study. $y$ = observed data; $y_{rep}$ = predicted data.
 
@@ -222,11 +222,11 @@ include_graphics(
 
 
 
-## Study 3: Lexical decision
+## Study 2.3: Lexical decision
 
 ### Prior predictive checks
 
-Figures \@ref(fig:lexicaldecision-priorpredictivecheck-informativepriors), \@ref(fig:lexicaldecision-priorpredictivecheck-weaklyinformativepriors) and \@ref(fig:lexicaldecision-priorpredictivecheck-diffusepriors) show the prior predictive checks for the Gaussian models (for background on these checks, see [\underline{Study 1}](#study1-bayesian-diagnostics)). The three plots---corresponding to models that used the default Gaussian distribution---show that the priors fitted the data acceptably but not very well.
+Figures \@ref(fig:lexicaldecision-priorpredictivecheck-informativepriors), \@ref(fig:lexicaldecision-priorpredictivecheck-weaklyinformativepriors) and \@ref(fig:lexicaldecision-priorpredictivecheck-diffusepriors) show the prior predictive checks for the Gaussian models (for background on these checks, see [\underline{Study 2.1}](#study1-bayesian-diagnostics)). The three plots---corresponding to models that used the default Gaussian distribution---show that the priors fitted the data acceptably but not very well.
 
 (ref:lexicaldecision-priorpredictivecheck-informativepriors) Prior predictive checks for the Gaussian, informative prior model from the lexical decision study. $y$ = observed data; $y_{rep}$ = predicted data.
 
@@ -267,7 +267,7 @@ include_graphics(
 ```
 
 
-In contrast to the results from the Gaussian models, Figures \@ref(fig:lexicaldecision-priorpredictivecheck-informativepriors-exgaussian), \@ref(fig:lexicaldecision-priorpredictivecheck-weaklyinformativepriors-exgaussian) and \@ref(fig:lexicaldecision-priorpredictivecheck-diffusepriors-exgaussian) demonstrate that, when an ex-Gaussian distribution was used, the priors fitted the data far better, which converged with the results found in Studies 1 and 2.
+In contrast to the results from the Gaussian models, Figures \@ref(fig:lexicaldecision-priorpredictivecheck-informativepriors-exgaussian), \@ref(fig:lexicaldecision-priorpredictivecheck-weaklyinformativepriors-exgaussian) and \@ref(fig:lexicaldecision-priorpredictivecheck-diffusepriors-exgaussian) demonstrate that, when an ex-Gaussian distribution was used, the priors fitted the data far better, which converged with the results found in Studies 2.1 and 2.2.
 
 (ref:lexicaldecision-priorpredictivecheck-informativepriors-exgaussian) Prior predictive checks for the ex-Gaussian, informative prior model from the lexical decision study. $y$ = observed data; $y_{rep}$ = predicted data.
 

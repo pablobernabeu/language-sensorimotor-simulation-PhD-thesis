@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.19)  21 OCT 2022 15:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.19)  23 OCT 2022 21:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1175,95 +1175,95 @@ File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 <../semanticpriming/frequentist_analysis/model_diagnostics/plots/main_effects_semanticpriming_allFit_convergence.pdf, id=1799, 650.43pt x 758.835pt>
 File: ../semanticpriming/frequentist_analysis/model_diagnostics/plots/main_effects_semanticpriming_allFit_convergence.pdf Graphic file (type pdf)
 <use ../semanticpriming/frequentist_analysis/model_diagnostics/plots/main_effects_semanticpriming_allFit_convergence.pdf>
-Package pdftex.def Info: ../semanticpriming/frequentist_analysis/model_diagnostics/plots/main_effects_semanticpriming_allFit_convergence.pdf  used on input line 1717.
+Package pdftex.def Info: ../semanticpriming/frequentist_analysis/model_diagnostics/plots/main_effects_semanticpriming_allFit_convergence.pdf  used on input line 1719.
 (pdftex.def)             Requested size: 469.76817pt x 548.06288pt.
 <../semanticpriming/frequentist_analysis/model_diagnostics/plots/interactions_semanticpriming_allFit_convergence.pdf, id=1800, 650.43pt x 838.13126pt>
 File: ../semanticpriming/frequentist_analysis/model_diagnostics/plots/interactions_semanticpriming_allFit_convergence.pdf Graphic file (type pdf)
 <use ../semanticpriming/frequentist_analysis/model_diagnostics/plots/interactions_semanticpriming_allFit_convergence.pdf>
-Package pdftex.def Info: ../semanticpriming/frequentist_analysis/model_diagnostics/plots/interactions_semanticpriming_allFit_convergence.pdf  used on input line 1726.
+Package pdftex.def Info: ../semanticpriming/frequentist_analysis/model_diagnostics/plots/interactions_semanticpriming_allFit_convergence.pdf  used on input line 1728.
 (pdftex.def)             Requested size: 469.76817pt x 605.334pt.
 <../semanticpriming/frequentist_analysis/model_diagnostics/plots/semanticpriming_residuals.png, id=1802, 5621.0pt x 5621.0pt>
 File: ../semanticpriming/frequentist_analysis/model_diagnostics/plots/semanticpriming_residuals.png Graphic file (type png)
 <use ../semanticpriming/frequentist_analysis/model_diagnostics/plots/semanticpriming_residuals.png>
-Package pdftex.def Info: ../semanticpriming/frequentist_analysis/model_diagnostics/plots/semanticpriming_residuals.png  used on input line 1740.
+Package pdftex.def Info: ../semanticpriming/frequentist_analysis/model_diagnostics/plots/semanticpriming_residuals.png  used on input line 1742.
 (pdftex.def)             Requested size: 305.25345pt x 305.25345pt.
 
-Underfull \hbox (badness 7925) in paragraph at lines 1744--1744
+Underfull \hbox (badness 7925) in paragraph at lines 1746--1746
 |\T1/lmr/m/it/12 Resid-u-als of the lin-ear mixed-effects model from the se-man-tic prim-ing study.
  []
 
 <../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/main_effects_semanticpriming_with_visualsimilarity_allFit_convergence.pdf, id=1805, 650.43pt x 758.835pt>
 File: ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/main_effects_semanticpriming_with_visualsimilarity_allFit_convergence.pdf Graphic file (type pdf)
 <use ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/main_effects_semanticpriming_with_visualsimilarity_allFit_convergence.pdf>
-Package pdftex.def Info: ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/main_effects_semanticpriming_with_visualsimilarity_allFit_convergence.pdf  used on input line 1759.
+Package pdftex.def Info: ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/main_effects_semanticpriming_with_visualsimilarity_allFit_convergence.pdf  used on input line 1761.
 (pdftex.def)             Requested size: 469.76817pt x 548.06288pt.
-<../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/interactions_semanticpriming_with_visualsimilarity_allFit_convergence.pdf, id=1806, 650.43pt x 838.13126pt>
+[126] [127 <../semanticpriming/frequentist_analysis/model_diagnostics/plots/main_effects_semanticpriming_allFit_convergence.pdf>] [128 <../semanticpriming/frequentist_analysis/model_diagnostics/plots/interactions_semanticpriming_allFit_convergence.pdf>]
+<../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/interactions_semanticpriming_with_visualsimilarity_allFit_convergence.pdf, id=1855, 650.43pt x 838.13126pt>
 File: ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/interactions_semanticpriming_with_visualsimilarity_allFit_convergence.pdf Graphic file (type pdf)
 <use ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/interactions_semanticpriming_with_visualsimilarity_allFit_convergence.pdf>
-Package pdftex.def Info: ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/interactions_semanticpriming_with_visualsimilarity_allFit_convergence.pdf  used on input line 1768.
+Package pdftex.def Info: ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/interactions_semanticpriming_with_visualsimilarity_allFit_convergence.pdf  used on input line 1770.
 (pdftex.def)             Requested size: 469.76817pt x 605.334pt.
-<../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/semanticpriming_with_visualsimilarity_residuals.png, id=1808, 5621.0pt x 5621.0pt>
+<../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/semanticpriming_with_visualsimilarity_residuals.png, id=1857, 5621.0pt x 5621.0pt>
 File: ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/semanticpriming_with_visualsimilarity_residuals.png Graphic file (type png)
 <use ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/semanticpriming_with_visualsimilarity_residuals.png>
-Package pdftex.def Info: ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/semanticpriming_with_visualsimilarity_residuals.png  used on input line 1782.
+Package pdftex.def Info: ../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/semanticpriming_with_visualsimilarity_residuals.png  used on input line 1784.
 (pdftex.def)             Requested size: 305.25345pt x 305.25345pt.
 
-Underfull \hbox (badness 7925) in paragraph at lines 1786--1786
+Underfull \hbox (badness 7925) in paragraph at lines 1788--1788
 |\T1/lmr/m/it/12 Resid-u-als of the lin-ear mixed-effects model from the se-man-tic prim-ing study.
  []
 
-[126] [127 <../semanticpriming/frequentist_analysis/model_diagnostics/plots/main_effects_semanticpriming_allFit_convergence.pdf>] [128 <../semanticpriming/frequentist_analysis/model_diagnostics/plots/interactions_semanticpriming_allFit_convergence.pdf>]
-<../semanticdecision/frequentist_analysis/model_diagnostics/plots/main_effects_semanticdecision_allFit_convergence.pdf, id=1863, 650.43pt x 614.295pt>
+<../semanticdecision/frequentist_analysis/model_diagnostics/plots/main_effects_semanticdecision_allFit_convergence.pdf, id=1860, 650.43pt x 614.295pt>
 File: ../semanticdecision/frequentist_analysis/model_diagnostics/plots/main_effects_semanticdecision_allFit_convergence.pdf Graphic file (type pdf)
 <use ../semanticdecision/frequentist_analysis/model_diagnostics/plots/main_effects_semanticdecision_allFit_convergence.pdf>
-Package pdftex.def Info: ../semanticdecision/frequentist_analysis/model_diagnostics/plots/main_effects_semanticdecision_allFit_convergence.pdf  used on input line 1801.
+Package pdftex.def Info: ../semanticdecision/frequentist_analysis/model_diagnostics/plots/main_effects_semanticdecision_allFit_convergence.pdf  used on input line 1803.
 (pdftex.def)             Requested size: 469.76817pt x 443.66994pt.
-<../semanticdecision/frequentist_analysis/model_diagnostics/plots/interactions_semanticdecision_allFit_convergence.pdf, id=1864, 650.43pt x 614.295pt>
+<../semanticdecision/frequentist_analysis/model_diagnostics/plots/interactions_semanticdecision_allFit_convergence.pdf, id=1861, 650.43pt x 614.295pt>
 File: ../semanticdecision/frequentist_analysis/model_diagnostics/plots/interactions_semanticdecision_allFit_convergence.pdf Graphic file (type pdf)
 <use ../semanticdecision/frequentist_analysis/model_diagnostics/plots/interactions_semanticdecision_allFit_convergence.pdf>
-Package pdftex.def Info: ../semanticdecision/frequentist_analysis/model_diagnostics/plots/interactions_semanticdecision_allFit_convergence.pdf  used on input line 1810.
+Package pdftex.def Info: ../semanticdecision/frequentist_analysis/model_diagnostics/plots/interactions_semanticdecision_allFit_convergence.pdf  used on input line 1812.
 (pdftex.def)             Requested size: 469.76817pt x 443.66994pt.
-<../semanticdecision/frequentist_analysis/model_diagnostics/plots/semanticdecision_residuals.png, id=1866, 5621.0pt x 5621.0pt>
+<../semanticdecision/frequentist_analysis/model_diagnostics/plots/semanticdecision_residuals.png, id=1863, 5621.0pt x 5621.0pt>
 File: ../semanticdecision/frequentist_analysis/model_diagnostics/plots/semanticdecision_residuals.png Graphic file (type png)
 <use ../semanticdecision/frequentist_analysis/model_diagnostics/plots/semanticdecision_residuals.png>
-Package pdftex.def Info: ../semanticdecision/frequentist_analysis/model_diagnostics/plots/semanticdecision_residuals.png  used on input line 1824.
+Package pdftex.def Info: ../semanticdecision/frequentist_analysis/model_diagnostics/plots/semanticdecision_residuals.png  used on input line 1826.
 (pdftex.def)             Requested size: 305.25345pt x 305.25345pt.
 
-Underfull \hbox (badness 7595) in paragraph at lines 1828--1828
+Underfull \hbox (badness 7595) in paragraph at lines 1830--1830
 |\T1/lmr/m/it/12 Resid-u-als of the lin-ear mixed-effects model from the se-man-tic de-ci-sion study.
  []
 
 [129 <../semanticpriming/frequentist_analysis/model_diagnostics/plots/semanticpriming_residuals.png>] [130 <../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/main_effects_semanticpriming_with_visualsimilarity_allFit_convergence.pdf>] [131 <../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/interactions_semanticpriming_with_visualsimilarity_allFit_convergence.pdf>]
-<../lexicaldecision/frequentist_analysis/model_diagnostics/plots/main_effects_lexicaldecision_allFit_convergence.pdf, id=1920, 650.43pt x 505.89pt>
+<../lexicaldecision/frequentist_analysis/model_diagnostics/plots/main_effects_lexicaldecision_allFit_convergence.pdf, id=1918, 650.43pt x 505.89pt>
 File: ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/main_effects_lexicaldecision_allFit_convergence.pdf Graphic file (type pdf)
 <use ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/main_effects_lexicaldecision_allFit_convergence.pdf>
-Package pdftex.def Info: ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/main_effects_lexicaldecision_allFit_convergence.pdf  used on input line 1843.
+Package pdftex.def Info: ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/main_effects_lexicaldecision_allFit_convergence.pdf  used on input line 1845.
 (pdftex.def)             Requested size: 469.76817pt x 365.37524pt.
-<../lexicaldecision/frequentist_analysis/model_diagnostics/plots/interactions_lexicaldecision_allFit_convergence.pdf, id=1921, 650.43pt x 505.89pt>
+<../lexicaldecision/frequentist_analysis/model_diagnostics/plots/interactions_lexicaldecision_allFit_convergence.pdf, id=1919, 650.43pt x 505.89pt>
 File: ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/interactions_lexicaldecision_allFit_convergence.pdf Graphic file (type pdf)
 <use ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/interactions_lexicaldecision_allFit_convergence.pdf>
-Package pdftex.def Info: ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/interactions_lexicaldecision_allFit_convergence.pdf  used on input line 1852.
+Package pdftex.def Info: ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/interactions_lexicaldecision_allFit_convergence.pdf  used on input line 1854.
 (pdftex.def)             Requested size: 469.76817pt x 365.37524pt.
-<../lexicaldecision/frequentist_analysis/model_diagnostics/plots/lexicaldecision_residuals.png, id=1923, 5621.0pt x 5621.0pt>
+<../lexicaldecision/frequentist_analysis/model_diagnostics/plots/lexicaldecision_residuals.png, id=1921, 5621.0pt x 5621.0pt>
 File: ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/lexicaldecision_residuals.png Graphic file (type png)
 <use ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/lexicaldecision_residuals.png>
-Package pdftex.def Info: ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/lexicaldecision_residuals.png  used on input line 1866.
+Package pdftex.def Info: ../lexicaldecision/frequentist_analysis/model_diagnostics/plots/lexicaldecision_residuals.png  used on input line 1868.
 (pdftex.def)             Requested size: 305.25345pt x 305.25345pt.
 [132 <../semanticpriming/analysis_with_visualsimilarity/model_diagnostics/plots/semanticpriming_with_visualsimilarity_residuals.png>] [133 <../semanticdecision/frequentist_analysis/model_diagnostics/plots/main_effects_semanticdecision_allFit_convergence.pdf>] [134 <../semanticdecision/frequentist_analysis/model_diagnostics/plots/interactions_semanticdecision_allFit_convergence.pdf>] [135 <../semanticdecision/frequentist_analysis/model_diagnostics/plots/semanticdecision_residuals.png>] [136 <../lexicaldecision/frequentist_analysis/model_diagnostics/plots/main_effects_lexicaldecision_allFit_convergence.pdf>] [137 <../lexicaldecision/frequentist_analysis/model_diagnostics/plots/interactions_lexicaldecision_allFit_convergence.pdf>] [138 <../lexicaldecision/frequentist_analysis/model_diagnostics/plots/lexicaldecision_residuals.png>]
 <../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors.pdf, id=2019, 505.89pt x 505.89pt>
 File: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors.pdf Graphic file (type pdf)
 <use ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors.pdf>
-Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors.pdf  used on input line 1895.
+Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors.pdf  used on input line 1897.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors.pdf, id=2020, 505.89pt x 505.89pt>
 File: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors.pdf Graphic file (type pdf)
 <use ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors.pdf>
-Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors.pdf  used on input line 1906.
+Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors.pdf  used on input line 1908.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors.pdf, id=2021, 505.89pt x 505.89pt>
 File: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors.pdf Graphic file (type pdf)
 <use ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors.pdf>
-Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors.pdf  used on input line 1917.
+Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors.pdf  used on input line 1919.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 [139
 
@@ -1271,115 +1271,115 @@ Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_c
 <../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors_exgaussian.pdf, id=2111, 505.89pt x 505.89pt>
 File: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors_exgaussian.pdf Graphic file (type pdf)
 <use ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors_exgaussian.pdf>
-Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors_exgaussian.pdf  used on input line 1930.
+Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors_exgaussian.pdf  used on input line 1932.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf, id=2112, 505.89pt x 505.89pt>
 File: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf Graphic file (type pdf)
 <use ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf>
-Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf  used on input line 1941.
+Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf  used on input line 1943.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors_exgaussian.pdf, id=2113, 505.89pt x 505.89pt>
 File: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors_exgaussian.pdf Graphic file (type pdf)
 <use ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors_exgaussian.pdf>
-Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors_exgaussian.pdf  used on input line 1952.
+Package pdftex.def Info: ../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors_exgaussian.pdf  used on input line 1954.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../semanticpriming/bayesian_analysis/posterior_predictive_checks/plots/semanticpriming_posteriorpredictivechecks_allpriors_exgaussian.pdf, id=2115, 722.7pt x 289.08pt>
 File: ../semanticpriming/bayesian_analysis/posterior_predictive_checks/plots/semanticpriming_posteriorpredictivechecks_allpriors_exgaussian.pdf Graphic file (type pdf)
 <use ../semanticpriming/bayesian_analysis/posterior_predictive_checks/plots/semanticpriming_posteriorpredictivechecks_allpriors_exgaussian.pdf>
-Package pdftex.def Info: ../semanticpriming/bayesian_analysis/posterior_predictive_checks/plots/semanticpriming_posteriorpredictivechecks_allpriors_exgaussian.pdf  used on input line 1968.
+Package pdftex.def Info: ../semanticpriming/bayesian_analysis/posterior_predictive_checks/plots/semanticpriming_posteriorpredictivechecks_allpriors_exgaussian.pdf  used on input line 1970.
 (pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
 [143 <../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_informativepriors_exgaussian.pdf>] [144 <../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf>] [145 <../semanticpriming/bayesian_analysis/prior_predictive_checks/plots/semanticpriming_priorpredictivecheck_diffusepriors_exgaussian.pdf>]
 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors.pdf, id=2196, 505.89pt x 505.89pt>
 File: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors.pdf Graphic file (type pdf)
 <use ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors.pdf>
-Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors.pdf  used on input line 1987.
+Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors.pdf  used on input line 1989.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors.pdf, id=2197, 505.89pt x 505.89pt>
 File: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors.pdf Graphic file (type pdf)
 <use ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors.pdf>
-Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors.pdf  used on input line 1998.
+Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors.pdf  used on input line 2000.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors.pdf, id=2198, 505.89pt x 505.89pt>
 File: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors.pdf Graphic file (type pdf)
 <use ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors.pdf>
-Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors.pdf  used on input line 2009.
+Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors.pdf  used on input line 2011.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors_exgaussian.pdf, id=2202, 505.89pt x 505.89pt>
 File: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors_exgaussian.pdf Graphic file (type pdf)
 <use ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors_exgaussian.pdf>
-Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors_exgaussian.pdf  used on input line 2022.
+Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors_exgaussian.pdf  used on input line 2024.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf, id=2203, 505.89pt x 505.89pt>
 File: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf Graphic file (type pdf)
 <use ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf>
-Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf  used on input line 2033.
+Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf  used on input line 2035.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors_exgaussian.pdf, id=2204, 505.89pt x 505.89pt>
 File: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors_exgaussian.pdf Graphic file (type pdf)
 <use ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors_exgaussian.pdf>
-Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors_exgaussian.pdf  used on input line 2044.
+Package pdftex.def Info: ../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors_exgaussian.pdf  used on input line 2046.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../semanticdecision/bayesian_analysis/posterior_predictive_checks/plots/semanticdecision_posteriorpredictivechecks_allpriors_exgaussian.pdf, id=2207, 722.7pt x 289.08pt>
 File: ../semanticdecision/bayesian_analysis/posterior_predictive_checks/plots/semanticdecision_posteriorpredictivechecks_allpriors_exgaussian.pdf Graphic file (type pdf)
 <use ../semanticdecision/bayesian_analysis/posterior_predictive_checks/plots/semanticdecision_posteriorpredictivechecks_allpriors_exgaussian.pdf>
-Package pdftex.def Info: ../semanticdecision/bayesian_analysis/posterior_predictive_checks/plots/semanticdecision_posteriorpredictivechecks_allpriors_exgaussian.pdf  used on input line 2060.
+Package pdftex.def Info: ../semanticdecision/bayesian_analysis/posterior_predictive_checks/plots/semanticdecision_posteriorpredictivechecks_allpriors_exgaussian.pdf  used on input line 2062.
 (pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
 [146 <../semanticpriming/bayesian_analysis/posterior_predictive_checks/plots/semanticpriming_posteriorpredictivechecks_allpriors_exgaussian.pdf>] [147 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors.pdf>] [148 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors.pdf>] [149 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors.pdf>] [150 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_informativepriors_exgaussian.pdf>] [151 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf>] [152 <../semanticdecision/bayesian_analysis/prior_predictive_checks/plots/semanticdecision_priorpredictivecheck_diffusepriors_exgaussian.pdf>]
 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors.pdf, id=2386, 505.89pt x 505.89pt>
 File: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors.pdf Graphic file (type pdf)
 <use ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors.pdf>
-Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors.pdf  used on input line 2079.
+Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors.pdf  used on input line 2081.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors.pdf, id=2387, 505.89pt x 505.89pt>
 File: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors.pdf Graphic file (type pdf)
 <use ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors.pdf>
-Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors.pdf  used on input line 2090.
+Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors.pdf  used on input line 2092.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors.pdf, id=2388, 505.89pt x 505.89pt>
 File: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors.pdf Graphic file (type pdf)
 <use ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors.pdf>
-Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors.pdf  used on input line 2101.
+Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors.pdf  used on input line 2103.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors_exgaussian.pdf, id=2392, 505.89pt x 505.89pt>
 File: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors_exgaussian.pdf Graphic file (type pdf)
 <use ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors_exgaussian.pdf>
-Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors_exgaussian.pdf  used on input line 2114.
+Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors_exgaussian.pdf  used on input line 2116.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf, id=2393, 505.89pt x 505.89pt>
 File: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf Graphic file (type pdf)
 <use ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf>
-Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf  used on input line 2125.
+Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf  used on input line 2127.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors_exgaussian.pdf, id=2394, 505.89pt x 505.89pt>
 File: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors_exgaussian.pdf Graphic file (type pdf)
 <use ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors_exgaussian.pdf>
-Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors_exgaussian.pdf  used on input line 2136.
+Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors_exgaussian.pdf  used on input line 2138.
 (pdftex.def)             Requested size: 375.81166pt x 375.81166pt.
 <../lexicaldecision/bayesian_analysis/posterior_predictive_checks/plots/lexicaldecision_posteriorpredictivechecks_allpriors_exgaussian.pdf, id=2396, 722.7pt x 289.08pt>
 File: ../lexicaldecision/bayesian_analysis/posterior_predictive_checks/plots/lexicaldecision_posteriorpredictivechecks_allpriors_exgaussian.pdf Graphic file (type pdf)
 <use ../lexicaldecision/bayesian_analysis/posterior_predictive_checks/plots/lexicaldecision_posteriorpredictivechecks_allpriors_exgaussian.pdf>
-Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/posterior_predictive_checks/plots/lexicaldecision_posteriorpredictivechecks_allpriors_exgaussian.pdf  used on input line 2152.
+Package pdftex.def Info: ../lexicaldecision/bayesian_analysis/posterior_predictive_checks/plots/lexicaldecision_posteriorpredictivechecks_allpriors_exgaussian.pdf  used on input line 2154.
 (pdftex.def)             Requested size: 469.76045pt x 187.90417pt.
 [153 <../semanticdecision/bayesian_analysis/posterior_predictive_checks/plots/semanticdecision_posteriorpredictivechecks_allpriors_exgaussian.pdf>] [154 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors.pdf>] [155 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors.pdf>] [156 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors.pdf>] [157 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_informativepriors_exgaussian.pdf>] [158 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_weaklyinformativepriors_exgaussian.pdf>] [159 <../lexicaldecision/bayesian_analysis/prior_predictive_checks/plots/lexicaldecision_priorpredictivecheck_diffusepriors_exgaussian.pdf>] [160 <../lexicaldecision/bayesian_analysis/posterior_predictive_checks/plots/lexicaldecision_posteriorpredictivechecks_allpriors_exgaussian.pdf>]
 <../semanticpriming/frequentist_analysis/plots/semanticpriming-interactions-with-attentional-control.pdf, id=2592, 469.755pt x 505.89pt>
 File: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interactions-with-attentional-control.pdf Graphic file (type pdf)
 <use ../semanticpriming/frequentist_analysis/plots/semanticpriming-interactions-with-attentional-control.pdf>
-Package pdftex.def Info: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interactions-with-attentional-control.pdf  used on input line 2176.
+Package pdftex.def Info: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interactions-with-attentional-control.pdf  used on input line 2178.
 (pdftex.def)             Requested size: 399.29364pt x 430.00851pt.
 <../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-SOA.pdf, id=2593, 361.35pt x 325.215pt>
 File: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-SOA.pdf Graphic file (type pdf)
 <use ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-SOA.pdf>
-Package pdftex.def Info: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-SOA.pdf  used on input line 2185.
+Package pdftex.def Info: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-SOA.pdf  used on input line 2187.
 (pdftex.def)             Requested size: 328.82901pt x 295.9461pt.
 <../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-vocabulary-size.pdf, id=2594, 505.89pt x 375.4025pt>
 File: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-vocabulary-size.pdf Graphic file (type pdf)
 <use ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-vocabulary-size.pdf>
-Package pdftex.def Info: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-vocabulary-size.pdf  used on input line 2196.
+Package pdftex.def Info: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-vocabulary-size.pdf  used on input line 2198.
 (pdftex.def)             Requested size: 422.7833pt x 313.73206pt.
 <../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-gender.pdf, id=2595, 361.35pt x 325.215pt>
 File: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-gender.pdf Graphic file (type pdf)
 <use ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-gender.pdf>
-Package pdftex.def Info: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-gender.pdf  used on input line 2207.
+Package pdftex.def Info: ../semanticpriming/frequentist_analysis/plots/semanticpriming-interaction-word-concreteness-difference-gender.pdf  used on input line 2209.
 (pdftex.def)             Requested size: 328.82901pt x 295.9461pt.
 [161
 
@@ -1387,7 +1387,7 @@ Package pdftex.def Info: ../semanticpriming/frequentist_analysis/plots/semanticp
 <../semanticdecision/frequentist_analysis/plots/semanticdecision-interactions-with-information-uptake.pdf, id=2674, 542.025pt x 505.89pt>
 File: ../semanticdecision/frequentist_analysis/plots/semanticdecision-interactions-with-information-uptake.pdf Graphic file (type pdf)
 <use ../semanticdecision/frequentist_analysis/plots/semanticdecision-interactions-with-information-uptake.pdf>
-Package pdftex.def Info: ../semanticdecision/frequentist_analysis/plots/semanticdecision-interactions-with-information-uptake.pdf  used on input line 2223.
+Package pdftex.def Info: ../semanticdecision/frequentist_analysis/plots/semanticdecision-interactions-with-information-uptake.pdf  used on input line 2225.
 (pdftex.def)             Requested size: 446.28291pt x 416.5307pt.
 [165
 
@@ -1395,12 +1395,12 @@ Package pdftex.def Info: ../semanticdecision/frequentist_analysis/plots/semantic
 <../lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-vocabulary-age.pdf, id=2695, 505.89pt x 375.4025pt>
 File: ../lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-vocabulary-age.pdf Graphic file (type pdf)
 <use ../lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-vocabulary-age.pdf>
-Package pdftex.def Info: ../lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-vocabulary-age.pdf  used on input line 2239.
+Package pdftex.def Info: ../lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-vocabulary-age.pdf  used on input line 2241.
 (pdftex.def)             Requested size: 422.7833pt x 313.73206pt.
 <../lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-gender.pdf, id=2696, 361.35pt x 325.215pt>
 File: ../lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-gender.pdf Graphic file (type pdf)
 <use ../lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-gender.pdf>
-Package pdftex.def Info: ../lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-gender.pdf  used on input line 2250.
+Package pdftex.def Info: ../lexicaldecision/frequentist_analysis/plots/lexicaldecision-interaction-word-concreteness-gender.pdf  used on input line 2252.
 (pdftex.def)             Requested size: 305.34044pt x 274.8064pt.
 [166
 
@@ -1420,7 +1420,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <../semanticpriming/frequentist_bayesian_plots/plots/semanticpriming_frequentist_bayesian_plot_allpriors_exgaussian.pdf, id=2765, 578.16pt x 505.89pt>
 File: ../semanticpriming/frequentist_bayesian_plots/plots/semanticpriming_frequentist_bayesian_plot_allpriors_exgaussian.pdf Graphic file (type pdf)
 <use ../semanticpriming/frequentist_bayesian_plots/plots/semanticpriming_frequentist_bayesian_plot_allpriors_exgaussian.pdf>
-Package pdftex.def Info: ../semanticpriming/frequentist_bayesian_plots/plots/semanticpriming_frequentist_bayesian_plot_allpriors_exgaussian.pdf  used on input line 2427.
+Package pdftex.def Info: ../semanticpriming/frequentist_bayesian_plots/plots/semanticpriming_frequentist_bayesian_plot_allpriors_exgaussian.pdf  used on input line 2429.
 (pdftex.def)             Requested size: 469.75385pt x 411.0346pt.
 [172
 
@@ -1437,7 +1437,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <../semanticdecision/frequentist_bayesian_plots/plots/semanticdecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf, id=2816, 578.16pt x 505.89pt>
 File: ../semanticdecision/frequentist_bayesian_plots/plots/semanticdecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf Graphic file (type pdf)
 <use ../semanticdecision/frequentist_bayesian_plots/plots/semanticdecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf>
-Package pdftex.def Info: ../semanticdecision/frequentist_bayesian_plots/plots/semanticdecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf  used on input line 2576.
+Package pdftex.def Info: ../semanticdecision/frequentist_bayesian_plots/plots/semanticdecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf  used on input line 2578.
 (pdftex.def)             Requested size: 469.75385pt x 411.0346pt.
 [176
 
@@ -1454,7 +1454,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <../lexicaldecision/frequentist_bayesian_plots/plots/lexicaldecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf, id=2868, 533.995pt x 440.64626pt>
 File: ../lexicaldecision/frequentist_bayesian_plots/plots/lexicaldecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf Graphic file (type pdf)
 <use ../lexicaldecision/frequentist_bayesian_plots/plots/lexicaldecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf>
-Package pdftex.def Info: ../lexicaldecision/frequentist_bayesian_plots/plots/lexicaldecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf  used on input line 2713.
+Package pdftex.def Info: ../lexicaldecision/frequentist_bayesian_plots/plots/lexicaldecision_frequentist_bayesian_plot_allpriors_exgaussian.pdf  used on input line 2715.
 (pdftex.def)             Requested size: 469.77039pt x 387.64886pt.
 [180
 
@@ -1462,12 +1462,12 @@ Package pdftex.def Info: ../lexicaldecision/frequentist_bayesian_plots/plots/lex
 
 ] [182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214] [215] AED endfloat: Processing end Figures and Tables [216] (./thesis-core.aux)
 Package rerunfilecheck Info: File `thesis-core.out' has not changed.
-(rerunfilecheck)             Checksum: 3325700317DBAB930DBD992CC4239BB8;24500.
+(rerunfilecheck)             Checksum: EFB802CDEC2BD57B7DA6E725DC412221;24650.
  ) 
 Here is how much of TeX's memory you used:
  29498 strings out of 477006
- 618869 string characters out of 5825464
- 896694 words of memory out of 5000000
+ 618933 string characters out of 5825464
+ 896724 words of memory out of 5000000
  49046 multiletter control sequences out of 15000+600000
  555314 words of font info for 100 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1533,7 +1533,7 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}<c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtko10.pfb><c:/Users/Pablo/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis-core.pdf (219 pages, 9433106 bytes).
+Output written on thesis-core.pdf (219 pages, 9433172 bytes).
 PDF statistics:
  3987 PDF objects out of 4296 (max. 8388607)
  3355 compressed objects within 34 object streams

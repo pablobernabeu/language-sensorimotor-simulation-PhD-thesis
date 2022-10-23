@@ -16,7 +16,7 @@ This appendix presents extended results from the Bayesian analyses, containing a
 The approach used in this Bayesian analysis is that of estimation [@tendeiroReviewIssuesNull2019; also see @schmalzWhatBayesFactor2021]. Thus, the estimates were interpreted by considering the position of their credible intervals in relation to the predicted value of RT ($z$). That is, the closer an interval is to a value of 0 on the predicted RT ($z$), the smaller the effect of that predictor. For instance, an interval that is symmetrically centred on 0 indicates a very small effect, whereas---in comparison---an interval that does not include 0 indicates a far larger effect [for other examples of this approach, see @milekEavesdroppingHappinessRevisited2018; @preglaVariabilitySentenceComprehension2021; @rodriguez-ferreiroSemanticPrimingSchizotypal2020].
 
 
-## Study 1: Semantic priming
+## Study 2.1: Semantic priming
 
 Table \@ref(tab:semanticpriming-informativepriors-model) presents the results of the informative prior model, Table \@ref(tab:semanticpriming-weaklyinformativepriors-model) those of the weakly-informative prior model, and Table \@ref(tab:semanticpriming-diffusepriors-model) those of the diffuse prior model.
 
@@ -518,7 +518,7 @@ include_graphics(
 
 \clearpage
 
-## Study 2: Semantic decision
+## Study 2.2: Semantic decision
 
 Table \@ref(tab:semanticdecision-informativepriors-model) presents the results of the informative prior model, Table \@ref(tab:semanticdecision-weaklyinformativepriors-model) those of the weakly-informative prior model, and Table \@ref(tab:semanticdecision-diffusepriors-model) those of the diffuse prior model.
 
@@ -948,7 +948,7 @@ include_graphics(
 
 \clearpage
 
-## Study 3: Lexical decision
+## Study 2.3: Lexical decision
 
 Table \@ref(tab:lexicaldecision-informativepriors-model) presents the results of the informative prior model, Table \@ref(tab:lexicaldecision-weaklyinformativepriors-model) those of the weakly-informative prior model, and Table \@ref(tab:lexicaldecision-diffusepriors-model) those of the diffuse prior model.
 
