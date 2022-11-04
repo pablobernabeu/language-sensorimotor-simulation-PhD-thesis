@@ -153,6 +153,7 @@ library(knitr)        # Document rendering
 options(kableExtra.latex.load_packages = FALSE)  # instead, LaTeX packages loaded in header/preamble above
 library(kableExtra)   # Tables
 library(dplyr)        # Data wrangling
+library(reshape2)     # Data wrangling
 library(formattable)  # Format numbers
 library(kableExtra)   # Table formatting (e.g., `pack_rows()`)
 library(stringr)      # Text processing

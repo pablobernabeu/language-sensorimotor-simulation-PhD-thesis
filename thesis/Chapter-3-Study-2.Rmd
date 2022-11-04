@@ -328,7 +328,7 @@ The data set was trimmed by removing rows that lacked values on any variable, an
 
 ### Variables
 
-While the variables are generally described in the [\underline{general introduction}](#present-studies), a few further details are provided below regarding two of them.
+While the variables are outlined in the [\underline{general introduction}](#present-studies), a few further details are provided below regarding some of them.
 
 - `Vocabulary size`. The test used by @hutchison2013a comprised a synonym test, an antonym test, and an analogy test, all three extracted from the Woodcock–Johnson III diagnostic reading battery [@woodcockWoodcockJohnsonIII2001]. We operationalised the vocabulary measure as the mean score across the three tasks per participant.
 
@@ -1394,7 +1394,7 @@ The data set was trimmed by removing rows that lacked values on any variable, an
 
 ### Variables
 
-While the variables are generally described in the [\underline{general introduction}](#present-studies), a few further details are provided below regarding some of them.
+While the variables are outlined in the [\underline{general introduction}](#present-studies), a few further details are provided below regarding some of them.
 
 #### Vocabulary size 
 
@@ -1927,7 +1927,7 @@ lexicaldecision[, c('z_RT', 'z_vocabulary_age', 'z_word_frequency',
 
 ### Variables
 
-While the variables are generally described in the [\underline{general introduction}](#present-studies), a few further details are provided below regarding some of them.
+While the variables are outlined in the [\underline{general introduction}](#present-studies), a few further details are provided below regarding some of them.
 
 - `Vocabulary age`: the present study uses the name vocabulary *age*, as used in the study of @balota2007a. It measures the same linguistic experience as vocabulary size.
 
