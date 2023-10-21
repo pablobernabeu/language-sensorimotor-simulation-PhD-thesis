@@ -5,8 +5,8 @@
 # brms::mcmc_plot(), Three arguments are required for this function: a 
 # summary of a 'lmerTest' model, confidence intervals from 
 # lme4::confint.merMod(), and a plot from brms::mcmc_plot(). The function 
-# is equipped to accept the slight between the names of the predictors in 
-# the frequentist results and in the Bayesian results.
+# is equipped to accept the slight differences between the names of the 
+# predictors in the frequentist results and in the Bayesian results.
 
 
 frequentist_bayesian_plot =
